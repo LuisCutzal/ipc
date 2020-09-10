@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d56caba463fa45d4bf56e64e351573c5" Name="Diagram1">
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.Cargar_Guardar" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.DetalleModo" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.DetallePartida" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.Invitacion" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.Solitario" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.Torneo" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.Usuario" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FaseIpc2_201700841Model.Versus" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_Cargar_Guardar_Solitario" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_Cargar_Guardar_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_Cargar_Guardar_Versus" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_DetalleModo_Solitario" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_DetalleModo_Torneo" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_DetalleModo_Versus" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_Solitario_DetallePartida" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_Torneo_DetallePartida" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_Versus_DetallePartida" ManuallyRouted="false" />
+        <AssociationConnector Association="FaseIpc2_201700841Model.FK_Invitacion_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

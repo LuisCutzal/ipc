@@ -1,0 +1,16 @@
+﻿<h2>Cargar archivo</h2>
+@model List<string>
+
+@using (Html.BeginForm("Index", "ArchivoCarga", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label for="file">Cargar</label>
+    <input type="file" name="file" id="file" accept=".xml" />
+    <br />
+    <input type="submit" value="Cargar Archivo" id="Cargar" />
+    <br />
+    <br />
+    <br />
+    <br />
+    @ViewBag.Message
+    <br />
+}

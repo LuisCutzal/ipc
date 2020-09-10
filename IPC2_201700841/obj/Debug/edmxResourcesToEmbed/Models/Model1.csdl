@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FaseIpc2_201700841Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cargar_Guardar">
+    <Key>
+      <PropertyRef Name="Id_partida" />
+    </Key>
+    <Property Name="Id_partida" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NombreUsuario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Id_versus" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Id_solitario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Solitario" Relationship="Self.FK_Cargar_Guardar_Solitario" FromRole="Cargar_Guardar" ToRole="Solitario" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Cargar_Guardar_Usuario" FromRole="Cargar_Guardar" ToRole="Usuario" />
+    <NavigationProperty Name="Versus" Relationship="Self.FK_Cargar_Guardar_Versus" FromRole="Cargar_Guardar" ToRole="Versus" />
+  </EntityType>
+  <EntityType Name="DetalleModo">
+    <Key>
+      <PropertyRef Name="DetalleModo1" />
+    </Key>
+    <Property Name="DetalleModo1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Id_versus" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Id_solitario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NombreTorneo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Solitario" Relationship="Self.FK_DetalleModo_Solitario" FromRole="DetalleModo" ToRole="Solitario" />
+    <NavigationProperty Name="Torneo" Relationship="Self.FK_DetalleModo_Torneo" FromRole="DetalleModo" ToRole="Torneo" />
+    <NavigationProperty Name="Versus" Relationship="Self.FK_DetalleModo_Versus" FromRole="DetalleModo" ToRole="Versus" />
+  </EntityType>
+  <EntityType Name="DetallePartida">
+    <Key>
+      <PropertyRef Name="Detalle" />
+    </Key>
+    <Property Name="Detalle" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ganador" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Perdedor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Partida" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Movimiento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Empate" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Solitario" Relationship="Self.FK_Solitario_DetallePartida" FromRole="DetallePartida" ToRole="Solitario" />
+    <NavigationProperty Name="Torneo" Relationship="Self.FK_Torneo_DetallePartida" FromRole="DetallePartida" ToRole="Torneo" />
+    <NavigationProperty Name="Versus" Relationship="Self.FK_Versus_DetallePartida" FromRole="DetallePartida" ToRole="Versus" />
+  </EntityType>
+  <EntityType Name="Invitacion">
+    <Key>
+      <PropertyRef Name="Id_invitacion" />
+    </Key>
+    <Property Name="Id_invitacion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NombreUsuario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Invitacion_Usuario" FromRole="Invitacion" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Solitario">
+    <Key>
+      <PropertyRef Name="Id_solitario" />
+    </Key>
+    <Property Name="Id_solitario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Detalle" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Cargar_Guardar" Relationship="Self.FK_Cargar_Guardar_Solitario" FromRole="Solitario" ToRole="Cargar_Guardar" />
+    <NavigationProperty Name="DetalleModo" Relationship="Self.FK_DetalleModo_Solitario" FromRole="Solitario" ToRole="DetalleModo" />
+    <NavigationProperty Name="DetallePartida" Relationship="Self.FK_Solitario_DetallePartida" FromRole="Solitario" ToRole="DetallePartida" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Torneo">
+    <Key>
+      <PropertyRef Name="NombreTorneo" />
+    </Key>
+    <Property Name="NombreTorneo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Detalle" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="DetalleModo" Relationship="Self.FK_DetalleModo_Torneo" FromRole="Torneo" ToRole="DetalleModo" />
+    <NavigationProperty Name="DetallePartida" Relationship="Self.FK_Torneo_DetallePartida" FromRole="Torneo" ToRole="DetallePartida" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="NombreUsuario" />
+    </Key>
+    <Property Name="NombreUsuario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Contra" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FechaNac" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Pais" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Correo" Type="String" MaxLength="35" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Cargar_Guardar" Relationship="Self.FK_Cargar_Guardar_Usuario" FromRole="Usuario" ToRole="Cargar_Guardar" />
+    <NavigationProperty Name="Invitacion" Relationship="Self.FK_Invitacion_Usuario" FromRole="Usuario" ToRole="Invitacion" />
+  </EntityType>
+  <EntityType Name="Versus">
+    <Key>
+      <PropertyRef Name="Id_versus" />
+    </Key>
+    <Property Name="Id_versus" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Id_invitacion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Detalle" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Cargar_Guardar" Relationship="Self.FK_Cargar_Guardar_Versus" FromRole="Versus" ToRole="Cargar_Guardar" />
+    <NavigationProperty Name="DetalleModo" Relationship="Self.FK_DetalleModo_Versus" FromRole="Versus" ToRole="DetalleModo" />
+    <NavigationProperty Name="DetallePartida" Relationship="Self.FK_Versus_DetallePartida" FromRole="Versus" ToRole="DetallePartida" />
+  </EntityType>
+  <Association Name="FK_Cargar_Guardar_Solitario">
+    <End Role="Solitario" Type="Self.Solitario" Multiplicity="0..1" />
+    <End Role="Cargar_Guardar" Type="Self.Cargar_Guardar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solitario">
+        <PropertyRef Name="Id_solitario" />
+      </Principal>
+      <Dependent Role="Cargar_Guardar">
+        <PropertyRef Name="Id_solitario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cargar_Guardar_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Cargar_Guardar" Type="Self.Cargar_Guardar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="NombreUsuario" />
+      </Principal>
+      <Dependent Role="Cargar_Guardar">
+        <PropertyRef Name="NombreUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cargar_Guardar_Versus">
+    <End Role="Versus" Type="Self.Versus" Multiplicity="0..1" />
+    <End Role="Cargar_Guardar" Type="Self.Cargar_Guardar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Versus">
+        <PropertyRef Name="Id_versus" />
+      </Principal>
+      <Dependent Role="Cargar_Guardar">
+        <PropertyRef Name="Id_versus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleModo_Solitario">
+    <End Role="Solitario" Type="Self.Solitario" Multiplicity="0..1" />
+    <End Role="DetalleModo" Type="Self.DetalleModo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solitario">
+        <PropertyRef Name="Id_solitario" />
+      </Principal>
+      <Dependent Role="DetalleModo">
+        <PropertyRef Name="Id_solitario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleModo_Torneo">
+    <End Role="Torneo" Type="Self.Torneo" Multiplicity="0..1" />
+    <End Role="DetalleModo" Type="Self.DetalleModo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Torneo">
+        <PropertyRef Name="NombreTorneo" />
+      </Principal>
+      <Dependent Role="DetalleModo">
+        <PropertyRef Name="NombreTorneo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleModo_Versus">
+    <End Role="Versus" Type="Self.Versus" Multiplicity="0..1" />
+    <End Role="DetalleModo" Type="Self.DetalleModo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Versus">
+        <PropertyRef Name="Id_versus" />
+      </Principal>
+      <Dependent Role="DetalleModo">
+        <PropertyRef Name="Id_versus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solitario_DetallePartida">
+    <End Role="DetallePartida" Type="Self.DetallePartida" Multiplicity="0..1" />
+    <End Role="Solitario" Type="Self.Solitario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetallePartida">
+        <PropertyRef Name="Detalle" />
+      </Principal>
+      <Dependent Role="Solitario">
+        <PropertyRef Name="Detalle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Torneo_DetallePartida">
+    <End Role="DetallePartida" Type="Self.DetallePartida" Multiplicity="1" />
+    <End Role="Torneo" Type="Self.Torneo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetallePartida">
+        <PropertyRef Name="Detalle" />
+      </Principal>
+      <Dependent Role="Torneo">
+        <PropertyRef Name="Detalle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Versus_DetallePartida">
+    <End Role="DetallePartida" Type="Self.DetallePartida" Multiplicity="1" />
+    <End Role="Versus" Type="Self.Versus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetallePartida">
+        <PropertyRef Name="Detalle" />
+      </Principal>
+      <Dependent Role="Versus">
+        <PropertyRef Name="Detalle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invitacion_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Invitacion" Type="Self.Invitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="NombreUsuario" />
+      </Principal>
+      <Dependent Role="Invitacion">
+        <PropertyRef Name="NombreUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FaseIpc2_201700841Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cargar_Guardar" EntityType="Self.Cargar_Guardar" />
+    <EntitySet Name="DetalleModo" EntityType="Self.DetalleModo" />
+    <EntitySet Name="DetallePartida" EntityType="Self.DetallePartida" />
+    <EntitySet Name="Invitacion" EntityType="Self.Invitacion" />
+    <EntitySet Name="Solitario" EntityType="Self.Solitario" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Torneo" EntityType="Self.Torneo" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="Versus" EntityType="Self.Versus" />
+    <AssociationSet Name="FK_Cargar_Guardar_Solitario" Association="Self.FK_Cargar_Guardar_Solitario">
+      <End Role="Solitario" EntitySet="Solitario" />
+      <End Role="Cargar_Guardar" EntitySet="Cargar_Guardar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cargar_Guardar_Usuario" Association="Self.FK_Cargar_Guardar_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Cargar_Guardar" EntitySet="Cargar_Guardar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cargar_Guardar_Versus" Association="Self.FK_Cargar_Guardar_Versus">
+      <End Role="Versus" EntitySet="Versus" />
+      <End Role="Cargar_Guardar" EntitySet="Cargar_Guardar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleModo_Solitario" Association="Self.FK_DetalleModo_Solitario">
+      <End Role="Solitario" EntitySet="Solitario" />
+      <End Role="DetalleModo" EntitySet="DetalleModo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleModo_Torneo" Association="Self.FK_DetalleModo_Torneo">
+      <End Role="Torneo" EntitySet="Torneo" />
+      <End Role="DetalleModo" EntitySet="DetalleModo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleModo_Versus" Association="Self.FK_DetalleModo_Versus">
+      <End Role="Versus" EntitySet="Versus" />
+      <End Role="DetalleModo" EntitySet="DetalleModo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solitario_DetallePartida" Association="Self.FK_Solitario_DetallePartida">
+      <End Role="DetallePartida" EntitySet="DetallePartida" />
+      <End Role="Solitario" EntitySet="Solitario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Torneo_DetallePartida" Association="Self.FK_Torneo_DetallePartida">
+      <End Role="DetallePartida" EntitySet="DetallePartida" />
+      <End Role="Torneo" EntitySet="Torneo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Versus_DetallePartida" Association="Self.FK_Versus_DetallePartida">
+      <End Role="DetallePartida" EntitySet="DetallePartida" />
+      <End Role="Versus" EntitySet="Versus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invitacion_Usuario" Association="Self.FK_Invitacion_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Invitacion" EntitySet="Invitacion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
