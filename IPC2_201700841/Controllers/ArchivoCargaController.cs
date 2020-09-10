@@ -40,55 +40,10 @@ namespace IPC2_201700841.Controllers
                         case "ficha":
                             datos += reader.ReadString();
                             break;
-                        
                     }
                 }
             }
             return View("Index");
         }
-    //    [HttpPost]
-    //    public ActionResult Index(HttpPostedFileBase file)
-    //    {
-    //        if (file != null && file.ContentLength > 0) 
-    //        { 
-    //            try
-    //            {
-    //                string path = Path.Combine(Server.MapPath("~/Archivo"),Path.GetFileName(file.FileName));
-    //                file.SaveAs(path); //guardar archivo fisicamente
-    //                ViewBag.Message = "Archivo Cargado";
-    //            }
-    //            catch (Exception ex)
-    //            {
-    //                ViewBag.Message = "ERROR:" + ex.Message.ToString();
-    //            }
-    //        }
-    //        else
-    //        {
-    //            ViewBag.Message = "Error al Guardar"; //esto es al momento de guardar
-    //        }
-
-    //        var items = GetFiles();
-    //        return View(items);
-    //    }
-
-    //    public FileResult Download(string ArchivoName)
-    //    {
-    //        var FileVirtualPath = "~/Archivo/" + ArchivoName;
-    //        return File(FileVirtualPath, "application/force- download", Path.GetFileName(FileVirtualPath));
-    //    }
-
-    //    private List<string> GetFiles()
-    //    {
-    //        var dir = new System.IO.DirectoryInfo(Server.MapPath("~/Archivo"));
-    //        System.IO.FileInfo[] fileNames = dir.GetFiles("*.xml");
-
-    //        List<string> items = new List<string>();
-    //        foreach (var file in fileNames)
-    //        {
-    //            items.Add(file.Name);
-    //        }
-
-    //        return items;
-    //    }
-}
+    }
 }
