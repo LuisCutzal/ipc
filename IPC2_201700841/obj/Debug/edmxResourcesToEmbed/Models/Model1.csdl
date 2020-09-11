@@ -270,5 +270,15 @@
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="Invitacion" EntitySet="Invitacion" />
     </AssociationSet>
+    <EntitySet Name="Archivo" EntityType="FaseIpc2_201700841Model.Archivo" />
   </EntityContainer>
+  <EntityType Name="Archivo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="columna" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fila" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

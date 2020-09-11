@@ -1,13 +1,21 @@
-﻿<h2>Cargar archivo</h2>
+﻿@model IPC2_201700841.Models.ViewModels.ArchivoModel
+
+
+<h2>Cargar archivo</h2>
 
 @using (Html.BeginForm("Index", "ArchivoCarga", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    <label for="file">Cargar</label>
-    <input type="file" name="file" id="file" accept=".xml" />
-    <br />
-    <input type="submit" value="Cargar Archivo" id="Cargar" />
-    <br />
-    <br />
-    @ViewBag.Message
-    <br />
+    <div>
+        <div>
+            <div> <!--div para el archivo-->
+                @Html.LabelFor(d=>d.Archivo)
+                @Html.TextBoxFor(d=>d.Archivo, new {type="file",accept=".xml" })
+                @Html.ValidationMessageFor(d=>d.Archivo)
+
+            </div>
+            <div>
+                <input type="submit" value="Aceptar" />
+            </div>
+        </div>
+    </div>
 }

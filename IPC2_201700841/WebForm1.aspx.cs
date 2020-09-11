@@ -84,7 +84,7 @@ namespace IPC2_201700841
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
             settings.IndentChars = "\t";
-            XmlWriter xmlWriter = XmlWriter.Create(ficha.ToString(), settings); //error
+            XmlWriter xmlWriter = XmlWriter.Create(ficha.ToString(), settings); //error porque no consigo la ubicacion
             xmlWriter.WriteStartDocument();
             xmlWriter.WriteStartElement("tablero");
             foreach (var dato in ficha.ToString())//error

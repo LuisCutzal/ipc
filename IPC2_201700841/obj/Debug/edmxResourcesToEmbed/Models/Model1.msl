@@ -90,5 +90,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Archivo">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Archivo">
+        <MappingFragment StoreEntitySet="Archivo">
+          <ScalarProperty Name="fila" ColumnName="fila" />
+          <ScalarProperty Name="columna" ColumnName="columna" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

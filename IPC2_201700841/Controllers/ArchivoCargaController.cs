@@ -1,4 +1,5 @@
 ﻿using IPC2_201700841.Models;
+using IPC2_201700841.Models.ViewModels;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -23,9 +24,16 @@ namespace IPC2_201700841.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(HttpPostedFileBase file)
+        public ActionResult Index(ArchivoModel file)
         {
-            XmlReader reader = XmlReader.Create(new StreamReader(file.InputStream));
+            string ruta = Server.MapPath("~/");//raiz del proyecto
+            string RutaArchivo = Path.Combine(ruta + "/Archivo/ejemplo.xml");
+            if (!ModelState.IsValid)//si el modelo que estoy pasando es valido
+            {
+                return View("Index",file); //model invalido
+            }
+            file.Archivo.SaveAs(RutaArchivo);
+            XmlReader reader = XmlReader.Create(RutaArchivo);
             using (SqlConnection sql1 = new SqlConnection(connectionString)) 
             {
                 sql1.Open();
@@ -61,14 +69,40 @@ namespace IPC2_201700841.Controllers
             }
             return View("Index");
         }
-        //[HttpGet]
-        //public FileResult Generar()
-        //{
-        //    using (FaseIpc2_201700841Entities db = new FaseIpc2_201700841Entities())
-        //    {
-
-        //    }
-        //}
+        [HttpGet]
+        public FileResult Generar()
+        {
+            using (FaseIpc2_201700841Entities db = new FaseIpc2_201700841Entities())
+            {
+                var estar = new MemoryStream();
+                XmlWriterSettings config = new XmlWriterSettings();
+                config.Indent = true;
+                XmlWriter escribirxmml = XmlWriter.Create(estar, config);
+                escribirxmml.WriteStartDocument();
+                escribirxmml.WriteStartElement("tablero");
+                foreach (var busca in db.Archivo) 
+                {
+                    escribirxmml.WriteStartElement("ficha");
+                    escribirxmml.WriteStartElement("color");
+                    escribirxmml.WriteString(busca.color);
+                    escribirxmml.WriteEndElement();
+                    escribirxmml.WriteStartElement("columna");
+                    escribirxmml.WriteString(busca.columna);
+                    escribirxmml.WriteEndElement();
+                    escribirxmml.WriteStartElement("fila");
+                    escribirxmml.WriteString(busca.fila.ToString());
+                    escribirxmml.WriteEndElement();
+                    escribirxmml.WriteEndElement();
+                }
+                escribirxmml.WriteEndElement();
+                escribirxmml.WriteEndDocument();
+                escribirxmml.Close();
+                estar.Position = 0;
+                var ArchivoResultado = File(estar, "application/octet-stream", "xml.xml");
+                return ArchivoResultado;
+                
+            }
+        }
         public ActionResult Tab()
         {
             using (FaseIpc2_201700841Entities db = new FaseIpc2_201700841Entities())
