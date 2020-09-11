@@ -1,5 +1,4 @@
 ﻿<h2>Cargar archivo</h2>
-@model List<string>
 
 @using (Html.BeginForm("Index", "ArchivoCarga", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -8,7 +7,6 @@
     <br />
     <input type="submit" value="Cargar Archivo" id="Cargar" />
     <br />
-    
     <br />
     @ViewBag.Message
     <br />

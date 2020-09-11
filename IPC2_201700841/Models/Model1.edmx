@@ -9,10 +9,10 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="color" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="columna" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="fila" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="color" Type="varchar" MaxLength="255" />
+          <Property Name="columna" Type="varchar" MaxLength="255" />
+          <Property Name="fila" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Cargar/Guardar">
           <Key>
@@ -50,18 +50,6 @@
           <Property Name="Id_invitacion" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="NombreUsuario" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'FaseIpc2_201700841.dbo.Modo' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Modo">
-          <Property Name="NombreUsuario" Type="nchar" MaxLength="10" />
-          <Property Name="DetalleModo" Type="nchar" MaxLength="10" />
-        </EntityType>-->
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'FaseIpc2_201700841.dbo.Participante' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Participante">
-          <Property Name="NombreTorneo" Type="nchar" MaxLength="10" />
-          <Property Name="NombreUsuario" Type="nchar" MaxLength="10" />
-        </EntityType>-->
         <EntityType Name="Solitario">
           <Key>
             <PropertyRef Name="Id_solitario" />
@@ -190,18 +178,6 @@ advertencia 6013: La tabla o vista 'FaseIpc2_201700841.dbo.Participante' no tien
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errores durante la generación:
-error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Modo', pero no se encuentra la tabla.
-        <Association Name="FK_Modo_DetalleModo" />-->
-        <!--Errores durante la generación:
-error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Modo', pero no se encuentra la tabla.
-        <Association Name="FK_Modo_Usuario" />-->
-        <!--Errores durante la generación:
-error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Participante', pero no se encuentra la tabla.
-        <Association Name="FK_Participante_Torneo" />-->
-        <!--Errores durante la generación:
-error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Participante', pero no se encuentra la tabla.
-        <Association Name="FK_Participante_Usuario" />-->
         <Association Name="FK_Solitario_DetallePartida">
           <End Role="DetallePartida" Type="Self.DetallePartida" Multiplicity="0..1" />
           <End Role="Solitario" Type="Self.Solitario" Multiplicity="*" />
@@ -571,9 +547,9 @@ error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Par
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="color" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="columna" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="fila" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="columna" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="fila" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Tab";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table >
+    @for (int j = 0; j < 8; j++) {
+
+        <tr>
+            @for (int i = 0; i < 8; i++) 
+            {
+                <td>
+                    @foreach (var dato in Model)
+                    {
+                        int index = ((int)char.ToUpper(char.Parse(dato.columna))) - 64;
+                        if (index == i + 1 && dato.fila == j + 1)
+                        {
+                            if (dato.color == "blanco") 
+                            {
+                                <img src="~/blanco.jpg" />
+                            }
+                            if (dato.color == "negro") 
+                            {
+                                <img src="~/negro.jpg" />
+                            }
+                        }
+                    }
+                </td>
+            }
+
+        </tr>
+    }
+
+</table>
+
