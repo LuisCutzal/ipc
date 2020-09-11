@@ -11,8 +11,7 @@ namespace IPC2_201700841.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Usuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,8 +24,6 @@ namespace IPC2_201700841.Models
         public string NombreUsuario { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        //[Required]
-        //[DataType(DataType.Password)]
         public string Contra { get; set; }
         public System.DateTime FechaNac { get; set; }
         public string Pais { get; set; }

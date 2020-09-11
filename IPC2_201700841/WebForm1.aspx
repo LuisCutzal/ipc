@@ -19,8 +19,11 @@
         <br />
         <br />
         <asp:TextBox id="TextBox1" runat="server" Height="192px" Width="523px"></asp:TextBox>
+        &nbsp;
         <br />
         <br />
+        
+        <asp:Button ID="GuardarArchivo" runat="server" OnClick="GuardarArchivo_Click" Text="Guardar Partida" />
         <br />
     </form>
 </body>

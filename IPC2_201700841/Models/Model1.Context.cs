@@ -34,5 +34,6 @@ namespace IPC2_201700841.Models
         public virtual DbSet<Torneo> Torneo { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Versus> Versus { get; set; }
+        public virtual DbSet<Archivo> Archivo { get; set; }
     }
 }

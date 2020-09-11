@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="FaseIpc2_201700841Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Archivo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="color" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="columna" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="fila" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
         <EntityType Name="Cargar/Guardar">
           <Key>
             <PropertyRef Name="Id_partida" />
@@ -41,6 +50,18 @@
           <Property Name="Id_invitacion" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="NombreUsuario" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'FaseIpc2_201700841.dbo.Modo' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Modo">
+          <Property Name="NombreUsuario" Type="nchar" MaxLength="10" />
+          <Property Name="DetalleModo" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'FaseIpc2_201700841.dbo.Participante' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Participante">
+          <Property Name="NombreTorneo" Type="nchar" MaxLength="10" />
+          <Property Name="NombreUsuario" Type="nchar" MaxLength="10" />
+        </EntityType>-->
         <EntityType Name="Solitario">
           <Key>
             <PropertyRef Name="Id_solitario" />
@@ -169,6 +190,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Modo', pero no se encuentra la tabla.
+        <Association Name="FK_Modo_DetalleModo" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Modo', pero no se encuentra la tabla.
+        <Association Name="FK_Modo_Usuario" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Participante', pero no se encuentra la tabla.
+        <Association Name="FK_Participante_Torneo" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'FaseIpc2_201700841.dbo.Participante', pero no se encuentra la tabla.
+        <Association Name="FK_Participante_Usuario" />-->
         <Association Name="FK_Solitario_DetallePartida">
           <End Role="DetallePartida" Type="Self.DetallePartida" Multiplicity="0..1" />
           <End Role="Solitario" Type="Self.Solitario" Multiplicity="*" />
@@ -206,6 +239,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="FaseIpc2_201700841ModelStoreContainer">
+          <EntitySet Name="Archivo" EntityType="Self.Archivo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cargar/Guardar" EntityType="Self.Cargar/Guardar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DetalleModo" EntityType="Self.DetalleModo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DetallePartida" EntityType="Self.DetallePartida" Schema="dbo" store:Type="Tables" />
@@ -530,7 +564,17 @@
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Invitacion" EntitySet="Invitacion" />
           </AssociationSet>
+          <EntitySet Name="Archivo" EntityType="FaseIpc2_201700841Model.Archivo" />
         </EntityContainer>
+        <EntityType Name="Archivo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="color" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="columna" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="fila" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -623,6 +667,16 @@
                 <ScalarProperty Name="Id_versus" ColumnName="Id_versus" />
                 <ScalarProperty Name="Id_invitacion" ColumnName="Id_invitacion" />
                 <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Archivo">
+            <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Archivo">
+              <MappingFragment StoreEntitySet="Archivo">
+                <ScalarProperty Name="fila" ColumnName="fila" />
+                <ScalarProperty Name="columna" ColumnName="columna" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

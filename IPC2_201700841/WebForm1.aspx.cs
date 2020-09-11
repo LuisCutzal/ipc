@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace IPC2_201700841
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        List<string> ficha = new List<string>();
         protected System.Web.UI.WebControls.Button btnUpload;
         protected System.Web.UI.WebControls.Label lblUploadResult;
         protected System.Web.UI.WebControls.Panel frmConfirmation;
@@ -32,6 +34,7 @@ namespace IPC2_201700841
         }
         protected void CargarArchivo_Click(object sender, EventArgs e)
         {
+            
             string NombreArchivo;
             string PathArchivo;
             string UbicacionA;
@@ -42,12 +45,13 @@ namespace IPC2_201700841
             {
                 //lblUploadResult.Text = "Funciona";
                 PathArchivo = UbicacionA + NombreArchivo;
-                XmlReader reader = XmlReader.Create(PathArchivo); //veremos
+                XmlReader reader = XmlReader.Create(PathArchivo);
+                ficha.Add(reader.ToString());
                 while (reader.Read()) 
                 {
                     if (reader.IsStartElement())
                     {
-                        switch (reader.Name.ToString())
+                        switch (reader.Name.ToString()) //ya puedo leer
                         {
                             case "ficha":
                                 TextBox1.Text += "insertar fichas";
@@ -73,6 +77,44 @@ namespace IPC2_201700841
             {
                 lblUploadResult.Text = "No ha seleccionado ningun archivo";
             }
+        }
+
+        protected void GuardarArchivo_Click(object sender, EventArgs e)
+        {
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.IndentChars = "\t";
+            XmlWriter xmlWriter = XmlWriter.Create(ficha.ToString(), settings); //error
+            xmlWriter.WriteStartDocument();
+            xmlWriter.WriteStartElement("tablero");
+            foreach (var dato in ficha.ToString())//error
+            {
+                xmlWriter.WriteStartElement("ficha");
+                xmlWriter.WriteStartElement("color");
+                if (dato.ToString() == "color") 
+                {
+                    xmlWriter.WriteString(dato.ToString());
+                    xmlWriter.WriteEndElement();
+                }
+                xmlWriter.WriteStartElement("columna");
+                if (dato.ToString() == "columna") 
+                {
+                    xmlWriter.WriteString(dato.ToString());
+                    xmlWriter.WriteEndElement();
+                }
+                xmlWriter.WriteStartElement("fila");
+                if (dato.ToString() == "fila")
+                {
+                    xmlWriter.WriteString(dato.ToString());
+                    xmlWriter.WriteEndElement();
+                }
+                xmlWriter.WriteEndElement();
+
+            }
+            xmlWriter.WriteEndElement();
+            xmlWriter.WriteEndDocument();
+            xmlWriter.Close();
+
         }
     }
 }
