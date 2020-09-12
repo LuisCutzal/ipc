@@ -1,54 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="FaseIpc2_201700841ModelStoreContainer" CdmEntityContainer="FaseIpc2_201700841Entities">
-    <EntitySetMapping Name="Cargar_Guardar">
-      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Cargar_Guardar">
-        <MappingFragment StoreEntitySet="Cargar/Guardar">
-          <ScalarProperty Name="Id_partida" ColumnName="Id_partida" />
-          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
-          <ScalarProperty Name="Id_versus" ColumnName="Id_versus" />
-          <ScalarProperty Name="Id_solitario" ColumnName="Id_solitario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DetalleModo">
-      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.DetalleModo">
-        <MappingFragment StoreEntitySet="DetalleModo">
-          <ScalarProperty Name="DetalleModo1" ColumnName="DetalleModo" />
-          <ScalarProperty Name="Id_versus" ColumnName="Id_versus" />
-          <ScalarProperty Name="Id_solitario" ColumnName="Id_solitario" />
-          <ScalarProperty Name="NombreTorneo" ColumnName="NombreTorneo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DetallePartida">
-      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.DetallePartida">
-        <MappingFragment StoreEntitySet="DetallePartida">
-          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
-          <ScalarProperty Name="Ganador" ColumnName="Ganador" />
-          <ScalarProperty Name="Perdedor" ColumnName="Perdedor" />
-          <ScalarProperty Name="Partida" ColumnName="Partida" />
-          <ScalarProperty Name="Movimiento" ColumnName="Movimiento" />
-          <ScalarProperty Name="Empate" ColumnName="Empate" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Invitacion">
-      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Invitacion">
-        <MappingFragment StoreEntitySet="Invitacion">
-          <ScalarProperty Name="Id_invitacion" ColumnName="Id_invitacion" />
-          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Solitario">
-      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Solitario">
-        <MappingFragment StoreEntitySet="Solitario">
-          <ScalarProperty Name="Id_solitario" ColumnName="Id_solitario" />
-          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="FaseIpc2_201700841Model.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -57,36 +9,6 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Torneo">
-      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Torneo">
-        <MappingFragment StoreEntitySet="Torneo">
-          <ScalarProperty Name="NombreTorneo" ColumnName="NombreTorneo" />
-          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Usuario">
-      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Usuario">
-        <MappingFragment StoreEntitySet="Usuario">
-          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-          <ScalarProperty Name="Contra" ColumnName="Contra" />
-          <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
-          <ScalarProperty Name="Pais" ColumnName="Pais" />
-          <ScalarProperty Name="Correo" ColumnName="Correo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Versus">
-      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Versus">
-        <MappingFragment StoreEntitySet="Versus">
-          <ScalarProperty Name="Id_versus" ColumnName="Id_versus" />
-          <ScalarProperty Name="Id_invitacion" ColumnName="Id_invitacion" />
-          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -100,5 +22,107 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Cargar_Guardar">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Cargar_Guardar">
+        <MappingFragment StoreEntitySet="Cargar/Guardar">
+          <ScalarProperty Name="Id_solitario" ColumnName="Id_solitario" />
+          <ScalarProperty Name="Id_versus" ColumnName="Id_versus" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Id_partida" ColumnName="Id_partida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleModo">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.DetalleModo">
+        <MappingFragment StoreEntitySet="DetalleModo">
+          <ScalarProperty Name="NombreTorneo" ColumnName="NombreTorneo" />
+          <ScalarProperty Name="Id_solitario" ColumnName="Id_solitario" />
+          <ScalarProperty Name="Id_versus" ColumnName="Id_versus" />
+          <ScalarProperty Name="DetalleModo1" ColumnName="DetalleModo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetallePartida">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.DetallePartida">
+        <MappingFragment StoreEntitySet="DetallePartida">
+          <ScalarProperty Name="Empate" ColumnName="Empate" />
+          <ScalarProperty Name="Movimiento" ColumnName="Movimiento" />
+          <ScalarProperty Name="Partida" ColumnName="Partida" />
+          <ScalarProperty Name="Perdedor" ColumnName="Perdedor" />
+          <ScalarProperty Name="Ganador" ColumnName="Ganador" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invitacion">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Invitacion">
+        <MappingFragment StoreEntitySet="Invitacion">
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Id_invitacion" ColumnName="Id_invitacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solitario">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Solitario">
+        <MappingFragment StoreEntitySet="Solitario">
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="Id_solitario" ColumnName="Id_solitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Torneo">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Torneo">
+        <MappingFragment StoreEntitySet="Torneo">
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="NombreTorneo" ColumnName="NombreTorneo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+          <ScalarProperty Name="Contra" ColumnName="Contra" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Versus">
+      <EntityTypeMapping TypeName="FaseIpc2_201700841Model.Versus">
+        <MappingFragment StoreEntitySet="Versus">
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="Id_invitacion" ColumnName="Id_invitacion" />
+          <ScalarProperty Name="Id_versus" ColumnName="Id_versus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="FaseIpc2_201700841Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="FaseIpc2_201700841Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="FaseIpc2_201700841Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="FaseIpc2_201700841Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FaseIpc2_201700841Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="FaseIpc2_201700841Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FaseIpc2_201700841Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FaseIpc2_201700841Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FaseIpc2_201700841Model.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

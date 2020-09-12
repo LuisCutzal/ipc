@@ -1,36 +1,42 @@
 ﻿
-@{
-    ViewBag.Title = "Tab";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<table class="board" >
-    @for (int j = 0; j < 8; j++) {
-
-        <tr>
-            @for (int i = 0; i < 8; i++) 
-            {
+<div class="jumbotron">
+    <table>
+        @for (int fila = 0; fila < 9; fila++)
+        {
+            <tr><img src="~/verde.jpg" />
+                <!--fila-->
+                @for (int columna = 0; columna < 9; columna++)
+                {
                 <td>
-                    @foreach (var dato in Model)
+                    @foreach (var buscar in Model)
                     {
-                        int index = ((int)char.ToUpper(char.Parse(dato.columna))) - 64;
-                        if (index == i + 1 && dato.fila == j + 1)
+                        
+                        int inicio = ((int)char.ToUpper(char.Parse(buscar.columna))) - 64;
+                        if (columna == inicio && fila == buscar.fila)
                         {
-                            if (dato.color == "blanco") 
+                            if (buscar.color == "blanco")
                             {
                                 <img src="~/blanco.jpg" />
+                                <label> @columna </label>
+                                <label> @fila </label>
                             }
-                            if (dato.color == "negro") 
+                            if (buscar.color == "negro")
                             {
                                 <img src="~/negro.jpg" />
                             }
                         }
                     }
                 </td>
-            }
-
-        </tr>
-    }
-
-</table>
-
+                }
+            </tr>
+        }
+    </table>
+</div>
+<div class="jumbotron">
+    <div class="col-md-4">
+        <!--boton para cargar una partida guardada-->
+        <form action="/ArchivoCarga/Generar" method="post">
+            <input type="submit" value="Guardar" />
+        </form>
+    </div>
+</div>

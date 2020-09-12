@@ -12,7 +12,7 @@ using System.Web.Mvc;
 using System.Xml;
 
 namespace IPC2_201700841.Controllers
-{
+{    
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -26,7 +26,6 @@ namespace IPC2_201700841.Controllers
              //   ViewBag.Message = TempData["Message"].ToString();
             try
             {
-
                 using (FaseIpc2_201700841Entities baseDatos = new FaseIpc2_201700841Entities()) //entitis es el entity framework
                 {
                     var lista = from datos in baseDatos.Usuario
@@ -43,12 +42,10 @@ namespace IPC2_201700841.Controllers
                         return Redirect("/Usuarios/Create");
                       //  return Content("Usuario invalio ingrese de nuevo sus creenciales"); //se va al registro porque no entro
                     }
-
                 }
                 // el usuario ingresa a su cuenta.
                 //@TempData["Message"] = "prueba";
                 return RedirectToAction("Contact"); //usuario valido
-
             }
             catch (Exception ex)
             {
@@ -65,8 +62,8 @@ namespace IPC2_201700841.Controllers
         }
         //agregar una lista y luego recorrerla
 
-        
 
+        
         public ActionResult Contact() //about es igual que el contact
         {
             ViewBag.Message = "Your application description page.";
@@ -79,8 +76,6 @@ namespace IPC2_201700841.Controllers
         {
             
             try {
-
-
                  return RedirectToAction("About");
                   
             }

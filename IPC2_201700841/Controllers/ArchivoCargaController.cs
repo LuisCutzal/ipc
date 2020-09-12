@@ -23,6 +23,25 @@ namespace IPC2_201700841.Controllers
                        
             return View();
         }
+        
+        public ActionResult Tab()
+        {
+            List<ObtenerContenidoA> datos;
+
+            using (FaseIpc2_201700841Entities db = new FaseIpc2_201700841Entities())
+            {
+                datos = (from linea in db.Archivo
+                       select new ObtenerContenidoA
+                       {
+                           id = linea.id,
+                           color = linea.color,
+                           columna = linea.columna,
+                           fila = linea.fila
+                       }
+                    ).ToList();
+            }
+            return View(datos);
+        }
         [HttpPost]
         public ActionResult Index(ArchivoModel file)
         {
@@ -69,8 +88,13 @@ namespace IPC2_201700841.Controllers
             }
             return View("Index");
         }
+        public ActionResult Generar()
+        {
+
+            return View();
+        }
         [HttpGet]
-        public FileResult Generar()
+        public FileResult CrearArchivo()
         {
             using (FaseIpc2_201700841Entities db = new FaseIpc2_201700841Entities())
             {
@@ -80,7 +104,7 @@ namespace IPC2_201700841.Controllers
                 XmlWriter escribirxmml = XmlWriter.Create(estar, config);
                 escribirxmml.WriteStartDocument();
                 escribirxmml.WriteStartElement("tablero");
-                foreach (var busca in db.Archivo) 
+                foreach (var busca in db.Archivo)
                 {
                     escribirxmml.WriteStartElement("ficha");
                     escribirxmml.WriteStartElement("color");
@@ -100,17 +124,11 @@ namespace IPC2_201700841.Controllers
                 estar.Position = 0;
                 var ArchivoResultado = File(estar, "application/octet-stream", "xml.xml");
                 return ArchivoResultado;
-                
-            }
-        }
-        public ActionResult Tab()
-        {
-            using (FaseIpc2_201700841Entities db = new FaseIpc2_201700841Entities())
-            {
-                return View(db.Archivo.ToList());
-            }
 
+            }
         }
+        
+        
 
     }
 }
