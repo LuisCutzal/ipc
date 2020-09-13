@@ -20,10 +20,8 @@ namespace IPC2_201700841.Controllers
         // GET: FileUpload
         public ActionResult Index()
         {
-                       
             return View();
         }
-        
         public ActionResult Tab()
         {
             List<ObtenerContenidoA> datos;
@@ -90,7 +88,7 @@ namespace IPC2_201700841.Controllers
         }
         public ActionResult Generar()
         {
-            return View(CrearArchivo());
+            return View();
         }
         [HttpGet]
         public FileResult CrearArchivo()
