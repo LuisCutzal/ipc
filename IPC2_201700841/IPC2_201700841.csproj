@@ -263,7 +263,6 @@
     <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\ArchivoCarga\Index.cshtml" />
     <Content Include="Views\ArchivoCarga\Tab.cshtml" />
-    <Content Include="Views\ArchivoCarga\Generar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

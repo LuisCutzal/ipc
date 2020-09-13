@@ -53,11 +53,15 @@
     }
 </table>
 
-<div class="jumbotron">
-    <div class="col-md-4">
-        <!--boton para cargar una partida guardada-->
-        <form action="/ArchivoCarga/Generar" method="post">
-            <input type="submit" value="Guardar" />
-        </form>
+<h2>
+    Guardar Archivo
+</h2>
+@using (Html.BeginForm("CrearArchivo", "ArchivoCarga", FormMethod.Get, new { enctype = "multipart/form-data" }))
+{
+    <div class="jumbotron">
+        <div class="col-md-4">
+            <!--boton para cargar una partida guardada-->
+            <button type="submit">Guardar</button>
+        </div>
     </div>
-</div>
+}

@@ -86,10 +86,7 @@ namespace IPC2_201700841.Controllers
             }
             return View("Index");
         }
-        public ActionResult Generar()
-        {
-            return View();
-        }
+        
         [HttpGet]
         public FileResult CrearArchivo()
         {
@@ -119,7 +116,7 @@ namespace IPC2_201700841.Controllers
                 escribirxmml.WriteEndDocument();
                 escribirxmml.Close();
                 estar.Position = 0;
-                var ArchivoResultado = File(estar, "application/octet-stream", "xml.xml");
+                var ArchivoResultado = File(estar, "application/octet-stream", " ");
                 return ArchivoResultado;
 
             }
