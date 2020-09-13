@@ -90,8 +90,7 @@ namespace IPC2_201700841.Controllers
         }
         public ActionResult Generar()
         {
-
-            return View();
+            return View(CrearArchivo());
         }
         [HttpGet]
         public FileResult CrearArchivo()
@@ -127,8 +126,5 @@ namespace IPC2_201700841.Controllers
 
             }
         }
-        
-        
-
     }
 }

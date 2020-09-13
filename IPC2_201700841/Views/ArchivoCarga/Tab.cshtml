@@ -1,16 +1,35 @@
 ﻿
-<div class="jumbotron">
-    <table>
-        @for (int fila = 0; fila < 9; fila++)
-        {
-            <tr><img src="~/verde.jpg" />
-                <!--fila-->
-                @for (int columna = 0; columna < 9; columna++)
-                {
+<style>
+    .tablero {
+        border: 1px solid black;
+    }
+
+    td {
+        height: 75px;
+        width: 75px;
+        background-image: url(../../verde.jpg);
+        border: 1px solid black;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+</style>
+
+
+
+<table class="tablero">
+    @for (int fila = 0; fila < 9; fila++)
+    {
+        <tr>
+            <!--fila-->
+            @for (int columna = 0; columna < 9; columna++)
+            {
                 <td>
                     @foreach (var buscar in Model)
                     {
-                        
+
                         int inicio = ((int)char.ToUpper(char.Parse(buscar.columna))) - 64;
                         if (columna == inicio && fila == buscar.fila)
                         {
@@ -24,14 +43,16 @@
                             {
                                 <img src="~/negro.jpg" />
                             }
+
                         }
+
                     }
                 </td>
-                }
-            </tr>
-        }
-    </table>
-</div>
+            }
+        </tr>
+    }
+</table>
+
 <div class="jumbotron">
     <div class="col-md-4">
         <!--boton para cargar una partida guardada-->
