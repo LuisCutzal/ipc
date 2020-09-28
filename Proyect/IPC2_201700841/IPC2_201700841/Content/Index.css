@@ -1,0 +1,39 @@
+﻿.cuerpo {
+    height: 100vh;
+}
+
+.cuerpo {
+    background-image: url('../img/juegos.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: aquamarine;
+}
+.espacio {
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-left: 40%;
+    background-color: rgba(225,225,225,.2);
+    box-shadow: #000000 5px 5px 5px;
+}
+.button {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    background-color: white;
+    border-radius: 10px;
+    align-content: center;
+    margin-top: 5px;
+    margin-left: 30%;
+}
+.pass {
+    margin-top: 5px;
+    margin-left: 10%;
+}
+.name {
+    margin-top: 5px;
+    margin-left: 10%;
+}

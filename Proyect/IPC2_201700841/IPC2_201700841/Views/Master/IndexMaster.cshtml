@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>View</title>
+    <link href="~/Content/Index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Othello</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    @*<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>*@
+                </ul>
+            </div>
+        </nav>
+
+
+    </div> @*termina la barra de navegacion de la pagina*@
+
+    <div>
+        @*aun me falta ver el video de administrador*@
+        <div>
+
+        </div>
+        <div class="cuerpo">
+            @*cuero de la pagina*@
+            @RenderBody()
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
