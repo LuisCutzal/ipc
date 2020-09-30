@@ -19,11 +19,15 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Othello</a>
+                    @*<a class="navbar-brand" href="#">Othello</a>*@
+                    @Html.ActionLink("Othello", "Inicio", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    <li>
+                        @*<a ><span class="glyphicon glyphicon-user"></span> Registrarse</a>*@
+                        @Html.ActionLink("Registrarse", "Index", "Usuarios/Create" ,new { area=" "}, new { @class = "glyphicon glyphicon-user" })
+                    </li>
                     @*<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>*@
                 </ul>
             </div>

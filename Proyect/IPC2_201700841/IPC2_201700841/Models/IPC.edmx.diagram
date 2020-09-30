@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ee076742a9b74380a151e2d0c549025a" Name="Diagram1">
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Admin" Width="1.5" PointX="1.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Detalle_Solitario" Width="1.5" PointX="5.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Detalle_torneo" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Detalle_Versus" Width="1.5" PointX="7.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Invitacion" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.ListaTorneo" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Partido" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Solitario" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Tipo" Width="1.5" PointX="7.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Torneo" Width="1.5" PointX="3.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Usuario" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Proyecto_IPC2Model.Versus" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Torneo__id_admin__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Detalle_S__id_so__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Detalle_t__id_to__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Detalle_t__id_us__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Partido__id_deta__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Detalle_V__id_ve__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Invitacio__id_us__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Versus__id_invit__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__ListaTorn__id_to__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__ListaTorn__id_us__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Tipo__id_partido__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Solitario__id_us__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="Proyecto_IPC2Model.FK__Versus__id_us__4BAC3F29" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

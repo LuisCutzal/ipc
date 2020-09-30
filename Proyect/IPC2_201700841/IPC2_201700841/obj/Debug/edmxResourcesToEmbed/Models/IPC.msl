@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Proyecto_IPC2ModelStoreContainer" CdmEntityContainer="Proyecto_IPC2">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+          <ScalarProperty Name="Nombreadmin" ColumnName="Nombreadmin" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Contra" ColumnName="Contra" />
+          <ScalarProperty Name="Fecha_nac" ColumnName="Fecha_nac" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Solitario">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Detalle_Solitario">
+        <MappingFragment StoreEntitySet="Detalle_Solitario">
+          <ScalarProperty Name="id_detalle_solitario" ColumnName="id_detalle_solitario" />
+          <ScalarProperty Name="movimiento" ColumnName="movimiento" />
+          <ScalarProperty Name="ganado" ColumnName="ganado" />
+          <ScalarProperty Name="perdido" ColumnName="perdido" />
+          <ScalarProperty Name="empatado" ColumnName="empatado" />
+          <ScalarProperty Name="id_solitario" ColumnName="id_solitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_torneo">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Detalle_torneo">
+        <MappingFragment StoreEntitySet="Detalle_torneo">
+          <ScalarProperty Name="id_detalle_torneo" ColumnName="id_detalle_torneo" />
+          <ScalarProperty Name="id_torneo" ColumnName="id_torneo" />
+          <ScalarProperty Name="id_us" ColumnName="id_us" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Versus">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Detalle_Versus">
+        <MappingFragment StoreEntitySet="Detalle_Versus">
+          <ScalarProperty Name="id_detalle_versus" ColumnName="id_detalle_versus" />
+          <ScalarProperty Name="movimiento" ColumnName="movimiento" />
+          <ScalarProperty Name="ganado" ColumnName="ganado" />
+          <ScalarProperty Name="perdido" ColumnName="perdido" />
+          <ScalarProperty Name="empatado" ColumnName="empatado" />
+          <ScalarProperty Name="id_versus" ColumnName="id_versus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invitacion">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Invitacion">
+        <MappingFragment StoreEntitySet="Invitacion">
+          <ScalarProperty Name="id_invitacion" ColumnName="id_invitacion" />
+          <ScalarProperty Name="contenido" ColumnName="contenido" />
+          <ScalarProperty Name="id_us" ColumnName="id_us" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaTorneo">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.ListaTorneo">
+        <MappingFragment StoreEntitySet="ListaTorneo">
+          <ScalarProperty Name="id_listaTorneo" ColumnName="id_listaTorneo" />
+          <ScalarProperty Name="id_torneo" ColumnName="id_torneo" />
+          <ScalarProperty Name="id_us" ColumnName="id_us" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Partido">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Partido">
+        <MappingFragment StoreEntitySet="Partido">
+          <ScalarProperty Name="id_partido" ColumnName="id_partido" />
+          <ScalarProperty Name="ronda" ColumnName="ronda" />
+          <ScalarProperty Name="movimineto" ColumnName="movimineto" />
+          <ScalarProperty Name="id_detalle_torneo" ColumnName="id_detalle_torneo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solitario">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Solitario">
+        <MappingFragment StoreEntitySet="Solitario">
+          <ScalarProperty Name="id_solitario" ColumnName="id_solitario" />
+          <ScalarProperty Name="id_us" ColumnName="id_us" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="id_tipo" ColumnName="id_tipo" />
+          <ScalarProperty Name="ganado" ColumnName="ganado" />
+          <ScalarProperty Name="perdido" ColumnName="perdido" />
+          <ScalarProperty Name="empatado" ColumnName="empatado" />
+          <ScalarProperty Name="id_partido" ColumnName="id_partido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Torneo">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Torneo">
+        <MappingFragment StoreEntitySet="Torneo">
+          <ScalarProperty Name="id_torneo" ColumnName="id_torneo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="id_us" ColumnName="id_us" />
+          <ScalarProperty Name="Nombre_usuario" ColumnName="Nombre_usuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Contra" ColumnName="Contra" />
+          <ScalarProperty Name="Fecha_nac" ColumnName="Fecha_nac" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Versus">
+      <EntityTypeMapping TypeName="Proyecto_IPC2Model.Versus">
+        <MappingFragment StoreEntitySet="Versus">
+          <ScalarProperty Name="id_versus" ColumnName="id_versus" />
+          <ScalarProperty Name="id_invitacion" ColumnName="id_invitacion" />
+          <ScalarProperty Name="id_us" ColumnName="id_us" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

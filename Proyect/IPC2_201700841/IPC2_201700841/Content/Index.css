@@ -8,7 +8,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: aquamarine;
+    background-color: black;
+
 }
 .espacio {
     border-radius: 5px;
@@ -36,4 +37,8 @@
 .name {
     margin-top: 5px;
     margin-left: 10%;
+}
+
+.bienvenido {
+    background-color: white;
 }

@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Proyecto_IPC2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id_admin" />
+          </Key>
+          <Property Name="id_admin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombreadmin" Type="varchar" MaxLength="45" />
+          <Property Name="Nombre" Type="varchar" MaxLength="45" />
+          <Property Name="Apellido" Type="varchar" MaxLength="45" />
+          <Property Name="Contra" Type="varchar" MaxLength="45" />
+          <Property Name="Fecha_nac" Type="date" />
+          <Property Name="Pais" Type="varchar" MaxLength="45" />
+          <Property Name="Correo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Detalle_Solitario">
+          <Key>
+            <PropertyRef Name="id_detalle_solitario" />
+          </Key>
+          <Property Name="id_detalle_solitario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="movimiento" Type="int" />
+          <Property Name="ganado" Type="int" />
+          <Property Name="perdido" Type="int" />
+          <Property Name="empatado" Type="int" />
+          <Property Name="id_solitario" Type="int" />
+        </EntityType>
+        <EntityType Name="Detalle_torneo">
+          <Key>
+            <PropertyRef Name="id_detalle_torneo" />
+          </Key>
+          <Property Name="id_detalle_torneo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_torneo" Type="int" />
+          <Property Name="id_us" Type="int" />
+        </EntityType>
+        <EntityType Name="Detalle_Versus">
+          <Key>
+            <PropertyRef Name="id_detalle_versus" />
+          </Key>
+          <Property Name="id_detalle_versus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="movimiento" Type="int" />
+          <Property Name="ganado" Type="int" />
+          <Property Name="perdido" Type="int" />
+          <Property Name="empatado" Type="int" />
+          <Property Name="id_versus" Type="int" />
+        </EntityType>
+        <EntityType Name="Invitacion">
+          <Key>
+            <PropertyRef Name="id_invitacion" />
+          </Key>
+          <Property Name="id_invitacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="contenido" Type="varchar" MaxLength="100" />
+          <Property Name="id_us" Type="int" />
+        </EntityType>
+        <EntityType Name="ListaTorneo">
+          <Key>
+            <PropertyRef Name="id_listaTorneo" />
+          </Key>
+          <Property Name="id_listaTorneo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_torneo" Type="int" />
+          <Property Name="id_us" Type="int" />
+        </EntityType>
+        <EntityType Name="Partido">
+          <Key>
+            <PropertyRef Name="id_partido" />
+          </Key>
+          <Property Name="id_partido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ronda" Type="int" />
+          <Property Name="movimineto" Type="int" />
+          <Property Name="id_detalle_torneo" Type="int" />
+        </EntityType>
+        <EntityType Name="Solitario">
+          <Key>
+            <PropertyRef Name="id_solitario" />
+          </Key>
+          <Property Name="id_solitario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_us" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="id_tipo" />
+          </Key>
+          <Property Name="id_tipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ganado" Type="int" />
+          <Property Name="perdido" Type="int" />
+          <Property Name="empatado" Type="int" />
+          <Property Name="id_partido" Type="int" />
+        </EntityType>
+        <EntityType Name="Torneo">
+          <Key>
+            <PropertyRef Name="id_torneo" />
+          </Key>
+          <Property Name="id_torneo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="45" />
+          <Property Name="id_admin" Type="int" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id_us" />
+          </Key>
+          <Property Name="id_us" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre_usuario" Type="varchar" MaxLength="45" />
+          <Property Name="Nombre" Type="varchar" MaxLength="45" />
+          <Property Name="Apellido" Type="varchar" MaxLength="45" />
+          <Property Name="Contra" Type="varchar" MaxLength="45" />
+          <Property Name="Fecha_nac" Type="date" />
+          <Property Name="Pais" Type="varchar" MaxLength="45" />
+          <Property Name="Correo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Versus">
+          <Key>
+            <PropertyRef Name="id_versus" />
+          </Key>
+          <Property Name="id_versus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_invitacion" Type="int" />
+          <Property Name="id_us" Type="int" />
+        </EntityType>
+        <Association Name="FK__Detalle_S__id_so__4E88ABD4">
+          <End Role="Solitario" Type="Self.Solitario" Multiplicity="0..1" />
+          <End Role="Detalle_Solitario" Type="Self.Detalle_Solitario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solitario">
+              <PropertyRef Name="id_solitario" />
+            </Principal>
+            <Dependent Role="Detalle_Solitario">
+              <PropertyRef Name="id_solitario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_t__id_to__46E78A0C">
+          <End Role="Torneo" Type="Self.Torneo" Multiplicity="0..1" />
+          <End Role="Detalle_torneo" Type="Self.Detalle_torneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torneo">
+              <PropertyRef Name="id_torneo" />
+            </Principal>
+            <Dependent Role="Detalle_torneo">
+              <PropertyRef Name="id_torneo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_t__id_us__47DBAE45">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Detalle_torneo" Type="Self.Detalle_torneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="Detalle_torneo">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_V__id_ve__571DF1D5">
+          <End Role="Versus" Type="Self.Versus" Multiplicity="0..1" />
+          <End Role="Detalle_Versus" Type="Self.Detalle_Versus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Versus">
+              <PropertyRef Name="id_versus" />
+            </Principal>
+            <Dependent Role="Detalle_Versus">
+              <PropertyRef Name="id_versus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitacio__id_us__412EB0B6">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Invitacion" Type="Self.Invitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="Invitacion">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ListaTorn__id_to__3D5E1FD2">
+          <End Role="Torneo" Type="Self.Torneo" Multiplicity="0..1" />
+          <End Role="ListaTorneo" Type="Self.ListaTorneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torneo">
+              <PropertyRef Name="id_torneo" />
+            </Principal>
+            <Dependent Role="ListaTorneo">
+              <PropertyRef Name="id_torneo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ListaTorn__id_us__3E52440B">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="ListaTorneo" Type="Self.ListaTorneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="ListaTorneo">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Partido__id_deta__5165187F">
+          <End Role="Detalle_torneo" Type="Self.Detalle_torneo" Multiplicity="0..1" />
+          <End Role="Partido" Type="Self.Partido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Detalle_torneo">
+              <PropertyRef Name="id_detalle_torneo" />
+            </Principal>
+            <Dependent Role="Partido">
+              <PropertyRef Name="id_detalle_torneo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Solitario__id_us__440B1D61">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Solitario" Type="Self.Solitario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="Solitario">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tipo__id_partido__5441852A">
+          <End Role="Partido" Type="Self.Partido" Multiplicity="0..1" />
+          <End Role="Tipo" Type="Self.Tipo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partido">
+              <PropertyRef Name="id_partido" />
+            </Principal>
+            <Dependent Role="Tipo">
+              <PropertyRef Name="id_partido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Torneo__id_admin__3A81B327">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Torneo" Type="Self.Torneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="id_admin" />
+            </Principal>
+            <Dependent Role="Torneo">
+              <PropertyRef Name="id_admin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Versus__id_invit__4AB81AF0">
+          <End Role="Invitacion" Type="Self.Invitacion" Multiplicity="0..1" />
+          <End Role="Versus" Type="Self.Versus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invitacion">
+              <PropertyRef Name="id_invitacion" />
+            </Principal>
+            <Dependent Role="Versus">
+              <PropertyRef Name="id_invitacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Versus__id_us__4BAC3F29">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Versus" Type="Self.Versus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="Versus">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Proyecto_IPC2ModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Detalle_Solitario" EntityType="Self.Detalle_Solitario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Detalle_torneo" EntityType="Self.Detalle_torneo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Detalle_Versus" EntityType="Self.Detalle_Versus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invitacion" EntityType="Self.Invitacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListaTorneo" EntityType="Self.ListaTorneo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Partido" EntityType="Self.Partido" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Solitario" EntityType="Self.Solitario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tipo" EntityType="Self.Tipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Torneo" EntityType="Self.Torneo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Versus" EntityType="Self.Versus" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Detalle_S__id_so__4E88ABD4" Association="Self.FK__Detalle_S__id_so__4E88ABD4">
+            <End Role="Solitario" EntitySet="Solitario" />
+            <End Role="Detalle_Solitario" EntitySet="Detalle_Solitario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_t__id_to__46E78A0C" Association="Self.FK__Detalle_t__id_to__46E78A0C">
+            <End Role="Torneo" EntitySet="Torneo" />
+            <End Role="Detalle_torneo" EntitySet="Detalle_torneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_t__id_us__47DBAE45" Association="Self.FK__Detalle_t__id_us__47DBAE45">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Detalle_torneo" EntitySet="Detalle_torneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_V__id_ve__571DF1D5" Association="Self.FK__Detalle_V__id_ve__571DF1D5">
+            <End Role="Versus" EntitySet="Versus" />
+            <End Role="Detalle_Versus" EntitySet="Detalle_Versus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitacio__id_us__412EB0B6" Association="Self.FK__Invitacio__id_us__412EB0B6">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Invitacion" EntitySet="Invitacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ListaTorn__id_to__3D5E1FD2" Association="Self.FK__ListaTorn__id_to__3D5E1FD2">
+            <End Role="Torneo" EntitySet="Torneo" />
+            <End Role="ListaTorneo" EntitySet="ListaTorneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ListaTorn__id_us__3E52440B" Association="Self.FK__ListaTorn__id_us__3E52440B">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="ListaTorneo" EntitySet="ListaTorneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Partido__id_deta__5165187F" Association="Self.FK__Partido__id_deta__5165187F">
+            <End Role="Detalle_torneo" EntitySet="Detalle_torneo" />
+            <End Role="Partido" EntitySet="Partido" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Solitario__id_us__440B1D61" Association="Self.FK__Solitario__id_us__440B1D61">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Solitario" EntitySet="Solitario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tipo__id_partido__5441852A" Association="Self.FK__Tipo__id_partido__5441852A">
+            <End Role="Partido" EntitySet="Partido" />
+            <End Role="Tipo" EntitySet="Tipo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Torneo__id_admin__3A81B327" Association="Self.FK__Torneo__id_admin__3A81B327">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Torneo" EntitySet="Torneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Versus__id_invit__4AB81AF0" Association="Self.FK__Versus__id_invit__4AB81AF0">
+            <End Role="Invitacion" EntitySet="Invitacion" />
+            <End Role="Versus" EntitySet="Versus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Versus__id_us__4BAC3F29" Association="Self.FK__Versus__id_us__4BAC3F29">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Versus" EntitySet="Versus" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Proyecto_IPC2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id_admin" />
+          </Key>
+          <Property Name="id_admin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombreadmin" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Contra" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_nac" Type="DateTime" Precision="0" />
+          <Property Name="Pais" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Torneo" Relationship="Self.FK__Torneo__id_admin__3A81B327" FromRole="Admin" ToRole="Torneo" />
+        </EntityType>
+        <EntityType Name="Detalle_Solitario">
+          <Key>
+            <PropertyRef Name="id_detalle_solitario" />
+          </Key>
+          <Property Name="id_detalle_solitario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="movimiento" Type="Int32" />
+          <Property Name="ganado" Type="Int32" />
+          <Property Name="perdido" Type="Int32" />
+          <Property Name="empatado" Type="Int32" />
+          <Property Name="id_solitario" Type="Int32" />
+          <NavigationProperty Name="Solitario" Relationship="Self.FK__Detalle_S__id_so__4E88ABD4" FromRole="Detalle_Solitario" ToRole="Solitario" />
+        </EntityType>
+        <EntityType Name="Detalle_torneo">
+          <Key>
+            <PropertyRef Name="id_detalle_torneo" />
+          </Key>
+          <Property Name="id_detalle_torneo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_torneo" Type="Int32" />
+          <Property Name="id_us" Type="Int32" />
+          <NavigationProperty Name="Torneo" Relationship="Self.FK__Detalle_t__id_to__46E78A0C" FromRole="Detalle_torneo" ToRole="Torneo" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Detalle_t__id_us__47DBAE45" FromRole="Detalle_torneo" ToRole="Usuario" />
+          <NavigationProperty Name="Partido" Relationship="Self.FK__Partido__id_deta__5165187F" FromRole="Detalle_torneo" ToRole="Partido" />
+        </EntityType>
+        <EntityType Name="Detalle_Versus">
+          <Key>
+            <PropertyRef Name="id_detalle_versus" />
+          </Key>
+          <Property Name="id_detalle_versus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="movimiento" Type="Int32" />
+          <Property Name="ganado" Type="Int32" />
+          <Property Name="perdido" Type="Int32" />
+          <Property Name="empatado" Type="Int32" />
+          <Property Name="id_versus" Type="Int32" />
+          <NavigationProperty Name="Versus" Relationship="Self.FK__Detalle_V__id_ve__571DF1D5" FromRole="Detalle_Versus" ToRole="Versus" />
+        </EntityType>
+        <EntityType Name="Invitacion">
+          <Key>
+            <PropertyRef Name="id_invitacion" />
+          </Key>
+          <Property Name="id_invitacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="contenido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="id_us" Type="Int32" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Invitacio__id_us__412EB0B6" FromRole="Invitacion" ToRole="Usuario" />
+          <NavigationProperty Name="Versus" Relationship="Self.FK__Versus__id_invit__4AB81AF0" FromRole="Invitacion" ToRole="Versus" />
+        </EntityType>
+        <EntityType Name="ListaTorneo">
+          <Key>
+            <PropertyRef Name="id_listaTorneo" />
+          </Key>
+          <Property Name="id_listaTorneo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_torneo" Type="Int32" />
+          <Property Name="id_us" Type="Int32" />
+          <NavigationProperty Name="Torneo" Relationship="Self.FK__ListaTorn__id_to__3D5E1FD2" FromRole="ListaTorneo" ToRole="Torneo" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__ListaTorn__id_us__3E52440B" FromRole="ListaTorneo" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Partido">
+          <Key>
+            <PropertyRef Name="id_partido" />
+          </Key>
+          <Property Name="id_partido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ronda" Type="Int32" />
+          <Property Name="movimineto" Type="Int32" />
+          <Property Name="id_detalle_torneo" Type="Int32" />
+          <NavigationProperty Name="Detalle_torneo" Relationship="Self.FK__Partido__id_deta__5165187F" FromRole="Partido" ToRole="Detalle_torneo" />
+          <NavigationProperty Name="Tipo" Relationship="Self.FK__Tipo__id_partido__5441852A" FromRole="Partido" ToRole="Tipo" />
+        </EntityType>
+        <EntityType Name="Solitario">
+          <Key>
+            <PropertyRef Name="id_solitario" />
+          </Key>
+          <Property Name="id_solitario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_us" Type="Int32" />
+          <NavigationProperty Name="Detalle_Solitario" Relationship="Self.FK__Detalle_S__id_so__4E88ABD4" FromRole="Solitario" ToRole="Detalle_Solitario" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Solitario__id_us__440B1D61" FromRole="Solitario" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="id_tipo" />
+          </Key>
+          <Property Name="id_tipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ganado" Type="Int32" />
+          <Property Name="perdido" Type="Int32" />
+          <Property Name="empatado" Type="Int32" />
+          <Property Name="id_partido" Type="Int32" />
+          <NavigationProperty Name="Partido" Relationship="Self.FK__Tipo__id_partido__5441852A" FromRole="Tipo" ToRole="Partido" />
+        </EntityType>
+        <EntityType Name="Torneo">
+          <Key>
+            <PropertyRef Name="id_torneo" />
+          </Key>
+          <Property Name="id_torneo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="id_admin" Type="Int32" />
+          <NavigationProperty Name="Admin" Relationship="Self.FK__Torneo__id_admin__3A81B327" FromRole="Torneo" ToRole="Admin" />
+          <NavigationProperty Name="Detalle_torneo" Relationship="Self.FK__Detalle_t__id_to__46E78A0C" FromRole="Torneo" ToRole="Detalle_torneo" />
+          <NavigationProperty Name="ListaTorneo" Relationship="Self.FK__ListaTorn__id_to__3D5E1FD2" FromRole="Torneo" ToRole="ListaTorneo" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id_us" />
+          </Key>
+          <Property Name="id_us" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_usuario" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Contra" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_nac" Type="DateTime" Precision="0" />
+          <Property Name="Pais" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Detalle_torneo" Relationship="Self.FK__Detalle_t__id_us__47DBAE45" FromRole="Usuario" ToRole="Detalle_torneo" />
+          <NavigationProperty Name="Invitacion" Relationship="Self.FK__Invitacio__id_us__412EB0B6" FromRole="Usuario" ToRole="Invitacion" />
+          <NavigationProperty Name="ListaTorneo" Relationship="Self.FK__ListaTorn__id_us__3E52440B" FromRole="Usuario" ToRole="ListaTorneo" />
+          <NavigationProperty Name="Solitario" Relationship="Self.FK__Solitario__id_us__440B1D61" FromRole="Usuario" ToRole="Solitario" />
+          <NavigationProperty Name="Versus" Relationship="Self.FK__Versus__id_us__4BAC3F29" FromRole="Usuario" ToRole="Versus" />
+        </EntityType>
+        <EntityType Name="Versus">
+          <Key>
+            <PropertyRef Name="id_versus" />
+          </Key>
+          <Property Name="id_versus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_invitacion" Type="Int32" />
+          <Property Name="id_us" Type="Int32" />
+          <NavigationProperty Name="Detalle_Versus" Relationship="Self.FK__Detalle_V__id_ve__571DF1D5" FromRole="Versus" ToRole="Detalle_Versus" />
+          <NavigationProperty Name="Invitacion" Relationship="Self.FK__Versus__id_invit__4AB81AF0" FromRole="Versus" ToRole="Invitacion" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Versus__id_us__4BAC3F29" FromRole="Versus" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="FK__Torneo__id_admin__3A81B327">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Torneo" Type="Self.Torneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="id_admin" />
+            </Principal>
+            <Dependent Role="Torneo">
+              <PropertyRef Name="id_admin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_S__id_so__4E88ABD4">
+          <End Role="Solitario" Type="Self.Solitario" Multiplicity="0..1" />
+          <End Role="Detalle_Solitario" Type="Self.Detalle_Solitario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solitario">
+              <PropertyRef Name="id_solitario" />
+            </Principal>
+            <Dependent Role="Detalle_Solitario">
+              <PropertyRef Name="id_solitario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_t__id_to__46E78A0C">
+          <End Role="Torneo" Type="Self.Torneo" Multiplicity="0..1" />
+          <End Role="Detalle_torneo" Type="Self.Detalle_torneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torneo">
+              <PropertyRef Name="id_torneo" />
+            </Principal>
+            <Dependent Role="Detalle_torneo">
+              <PropertyRef Name="id_torneo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_t__id_us__47DBAE45">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Detalle_torneo" Type="Self.Detalle_torneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="Detalle_torneo">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Partido__id_deta__5165187F">
+          <End Role="Detalle_torneo" Type="Self.Detalle_torneo" Multiplicity="0..1" />
+          <End Role="Partido" Type="Self.Partido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Detalle_torneo">
+              <PropertyRef Name="id_detalle_torneo" />
+            </Principal>
+            <Dependent Role="Partido">
+              <PropertyRef Name="id_detalle_torneo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_V__id_ve__571DF1D5">
+          <End Role="Versus" Type="Self.Versus" Multiplicity="0..1" />
+          <End Role="Detalle_Versus" Type="Self.Detalle_Versus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Versus">
+              <PropertyRef Name="id_versus" />
+            </Principal>
+            <Dependent Role="Detalle_Versus">
+              <PropertyRef Name="id_versus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitacio__id_us__412EB0B6">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Invitacion" Type="Self.Invitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="Invitacion">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Versus__id_invit__4AB81AF0">
+          <End Role="Invitacion" Type="Self.Invitacion" Multiplicity="0..1" />
+          <End Role="Versus" Type="Self.Versus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invitacion">
+              <PropertyRef Name="id_invitacion" />
+            </Principal>
+            <Dependent Role="Versus">
+              <PropertyRef Name="id_invitacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ListaTorn__id_to__3D5E1FD2">
+          <End Role="Torneo" Type="Self.Torneo" Multiplicity="0..1" />
+          <End Role="ListaTorneo" Type="Self.ListaTorneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torneo">
+              <PropertyRef Name="id_torneo" />
+            </Principal>
+            <Dependent Role="ListaTorneo">
+              <PropertyRef Name="id_torneo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ListaTorn__id_us__3E52440B">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="ListaTorneo" Type="Self.ListaTorneo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="ListaTorneo">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tipo__id_partido__5441852A">
+          <End Role="Partido" Type="Self.Partido" Multiplicity="0..1" />
+          <End Role="Tipo" Type="Self.Tipo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partido">
+              <PropertyRef Name="id_partido" />
+            </Principal>
+            <Dependent Role="Tipo">
+              <PropertyRef Name="id_partido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Solitario__id_us__440B1D61">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Solitario" Type="Self.Solitario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="Solitario">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Versus__id_us__4BAC3F29">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Versus" Type="Self.Versus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_us" />
+            </Principal>
+            <Dependent Role="Versus">
+              <PropertyRef Name="id_us" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Proyecto_IPC2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admin" EntityType="Self.Admin" />
+          <EntitySet Name="Detalle_Solitario" EntityType="Self.Detalle_Solitario" />
+          <EntitySet Name="Detalle_torneo" EntityType="Self.Detalle_torneo" />
+          <EntitySet Name="Detalle_Versus" EntityType="Self.Detalle_Versus" />
+          <EntitySet Name="Invitacion" EntityType="Self.Invitacion" />
+          <EntitySet Name="ListaTorneo" EntityType="Self.ListaTorneo" />
+          <EntitySet Name="Partido" EntityType="Self.Partido" />
+          <EntitySet Name="Solitario" EntityType="Self.Solitario" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Tipo" EntityType="Self.Tipo" />
+          <EntitySet Name="Torneo" EntityType="Self.Torneo" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+          <EntitySet Name="Versus" EntityType="Self.Versus" />
+          <AssociationSet Name="FK__Torneo__id_admin__3A81B327" Association="Self.FK__Torneo__id_admin__3A81B327">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Torneo" EntitySet="Torneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_S__id_so__4E88ABD4" Association="Self.FK__Detalle_S__id_so__4E88ABD4">
+            <End Role="Solitario" EntitySet="Solitario" />
+            <End Role="Detalle_Solitario" EntitySet="Detalle_Solitario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_t__id_to__46E78A0C" Association="Self.FK__Detalle_t__id_to__46E78A0C">
+            <End Role="Torneo" EntitySet="Torneo" />
+            <End Role="Detalle_torneo" EntitySet="Detalle_torneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_t__id_us__47DBAE45" Association="Self.FK__Detalle_t__id_us__47DBAE45">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Detalle_torneo" EntitySet="Detalle_torneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Partido__id_deta__5165187F" Association="Self.FK__Partido__id_deta__5165187F">
+            <End Role="Detalle_torneo" EntitySet="Detalle_torneo" />
+            <End Role="Partido" EntitySet="Partido" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_V__id_ve__571DF1D5" Association="Self.FK__Detalle_V__id_ve__571DF1D5">
+            <End Role="Versus" EntitySet="Versus" />
+            <End Role="Detalle_Versus" EntitySet="Detalle_Versus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitacio__id_us__412EB0B6" Association="Self.FK__Invitacio__id_us__412EB0B6">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Invitacion" EntitySet="Invitacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Versus__id_invit__4AB81AF0" Association="Self.FK__Versus__id_invit__4AB81AF0">
+            <End Role="Invitacion" EntitySet="Invitacion" />
+            <End Role="Versus" EntitySet="Versus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ListaTorn__id_to__3D5E1FD2" Association="Self.FK__ListaTorn__id_to__3D5E1FD2">
+            <End Role="Torneo" EntitySet="Torneo" />
+            <End Role="ListaTorneo" EntitySet="ListaTorneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ListaTorn__id_us__3E52440B" Association="Self.FK__ListaTorn__id_us__3E52440B">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="ListaTorneo" EntitySet="ListaTorneo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tipo__id_partido__5441852A" Association="Self.FK__Tipo__id_partido__5441852A">
+            <End Role="Partido" EntitySet="Partido" />
+            <End Role="Tipo" EntitySet="Tipo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Solitario__id_us__440B1D61" Association="Self.FK__Solitario__id_us__440B1D61">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Solitario" EntitySet="Solitario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Versus__id_us__4BAC3F29" Association="Self.FK__Versus__id_us__4BAC3F29">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Versus" EntitySet="Versus" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Proyecto_IPC2ModelStoreContainer" CdmEntityContainer="Proyecto_IPC2">
+          <EntitySetMapping Name="Admin">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+                <ScalarProperty Name="Nombreadmin" ColumnName="Nombreadmin" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Contra" ColumnName="Contra" />
+                <ScalarProperty Name="Fecha_nac" ColumnName="Fecha_nac" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Detalle_Solitario">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Detalle_Solitario">
+              <MappingFragment StoreEntitySet="Detalle_Solitario">
+                <ScalarProperty Name="id_detalle_solitario" ColumnName="id_detalle_solitario" />
+                <ScalarProperty Name="movimiento" ColumnName="movimiento" />
+                <ScalarProperty Name="ganado" ColumnName="ganado" />
+                <ScalarProperty Name="perdido" ColumnName="perdido" />
+                <ScalarProperty Name="empatado" ColumnName="empatado" />
+                <ScalarProperty Name="id_solitario" ColumnName="id_solitario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Detalle_torneo">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Detalle_torneo">
+              <MappingFragment StoreEntitySet="Detalle_torneo">
+                <ScalarProperty Name="id_detalle_torneo" ColumnName="id_detalle_torneo" />
+                <ScalarProperty Name="id_torneo" ColumnName="id_torneo" />
+                <ScalarProperty Name="id_us" ColumnName="id_us" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Detalle_Versus">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Detalle_Versus">
+              <MappingFragment StoreEntitySet="Detalle_Versus">
+                <ScalarProperty Name="id_detalle_versus" ColumnName="id_detalle_versus" />
+                <ScalarProperty Name="movimiento" ColumnName="movimiento" />
+                <ScalarProperty Name="ganado" ColumnName="ganado" />
+                <ScalarProperty Name="perdido" ColumnName="perdido" />
+                <ScalarProperty Name="empatado" ColumnName="empatado" />
+                <ScalarProperty Name="id_versus" ColumnName="id_versus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invitacion">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Invitacion">
+              <MappingFragment StoreEntitySet="Invitacion">
+                <ScalarProperty Name="id_invitacion" ColumnName="id_invitacion" />
+                <ScalarProperty Name="contenido" ColumnName="contenido" />
+                <ScalarProperty Name="id_us" ColumnName="id_us" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListaTorneo">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.ListaTorneo">
+              <MappingFragment StoreEntitySet="ListaTorneo">
+                <ScalarProperty Name="id_listaTorneo" ColumnName="id_listaTorneo" />
+                <ScalarProperty Name="id_torneo" ColumnName="id_torneo" />
+                <ScalarProperty Name="id_us" ColumnName="id_us" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Partido">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Partido">
+              <MappingFragment StoreEntitySet="Partido">
+                <ScalarProperty Name="id_partido" ColumnName="id_partido" />
+                <ScalarProperty Name="ronda" ColumnName="ronda" />
+                <ScalarProperty Name="movimineto" ColumnName="movimineto" />
+                <ScalarProperty Name="id_detalle_torneo" ColumnName="id_detalle_torneo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Solitario">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Solitario">
+              <MappingFragment StoreEntitySet="Solitario">
+                <ScalarProperty Name="id_solitario" ColumnName="id_solitario" />
+                <ScalarProperty Name="id_us" ColumnName="id_us" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Tipo">
+              <MappingFragment StoreEntitySet="Tipo">
+                <ScalarProperty Name="id_tipo" ColumnName="id_tipo" />
+                <ScalarProperty Name="ganado" ColumnName="ganado" />
+                <ScalarProperty Name="perdido" ColumnName="perdido" />
+                <ScalarProperty Name="empatado" ColumnName="empatado" />
+                <ScalarProperty Name="id_partido" ColumnName="id_partido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Torneo">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Torneo">
+              <MappingFragment StoreEntitySet="Torneo">
+                <ScalarProperty Name="id_torneo" ColumnName="id_torneo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="id_us" ColumnName="id_us" />
+                <ScalarProperty Name="Nombre_usuario" ColumnName="Nombre_usuario" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Contra" ColumnName="Contra" />
+                <ScalarProperty Name="Fecha_nac" ColumnName="Fecha_nac" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Versus">
+            <EntityTypeMapping TypeName="Proyecto_IPC2Model.Versus">
+              <MappingFragment StoreEntitySet="Versus">
+                <ScalarProperty Name="id_versus" ColumnName="id_versus" />
+                <ScalarProperty Name="id_invitacion" ColumnName="id_invitacion" />
+                <ScalarProperty Name="id_us" ColumnName="id_us" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

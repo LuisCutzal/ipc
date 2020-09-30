@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Solitario";
+    Layout = "~/Views/Master/Pagina_inicio_master.cshtml";
+}
+
+@* esta pagina es para cargar un archivo o darle siguiente para ir al tablero *@
+
+
+<div class="botonTablero">
+    <div class="col-md-4">
+        <!--boton para cargar una partida guardada-->
+        <form action="/Tablero/TableroSolitario" method="post">
+            <input type="submit" value="Tablero" />
+        </form>
+    </div>
+</div>

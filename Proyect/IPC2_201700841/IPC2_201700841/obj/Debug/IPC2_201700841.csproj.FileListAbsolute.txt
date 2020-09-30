@@ -84,3 +84,7 @@ C:\Users\cutzal\Desktop\escritorio\INGENIERIA\IPC2\2020\SegundoSemestre\Lab\Proy
 C:\Users\cutzal\Desktop\escritorio\INGENIERIA\IPC2\2020\SegundoSemestre\Lab\Proyecto\IPC2_201700841\IPC2_201700841\obj\Debug\IPC2_201700841.csproj.CopyComplete
 C:\Users\cutzal\Desktop\escritorio\INGENIERIA\IPC2\2020\SegundoSemestre\Lab\Proyecto\IPC2_201700841\IPC2_201700841\obj\Debug\IPC2_201700841.dll
 C:\Users\cutzal\Desktop\escritorio\INGENIERIA\IPC2\2020\SegundoSemestre\Lab\Proyecto\IPC2_201700841\IPC2_201700841\obj\Debug\IPC2_201700841.pdb
+C:\Users\cutzal\Desktop\escritorio\INGENIERIA\IPC2\2020\SegundoSemestre\Lab\Proyecto\IPC2_201700841\IPC2_201700841\bin\EntityFramework.dll
+C:\Users\cutzal\Desktop\escritorio\INGENIERIA\IPC2\2020\SegundoSemestre\Lab\Proyecto\IPC2_201700841\IPC2_201700841\bin\EntityFramework.SqlServer.dll
+C:\Users\cutzal\Desktop\escritorio\INGENIERIA\IPC2\2020\SegundoSemestre\Lab\Proyecto\IPC2_201700841\IPC2_201700841\bin\EntityFramework.xml
+C:\Users\cutzal\Desktop\escritorio\INGENIERIA\IPC2\2020\SegundoSemestre\Lab\Proyecto\IPC2_201700841\IPC2_201700841\bin\EntityFramework.SqlServer.xml
