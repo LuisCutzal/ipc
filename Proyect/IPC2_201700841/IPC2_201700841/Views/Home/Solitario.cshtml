@@ -7,6 +7,31 @@
 @* esta pagina es para cargar un archivo o darle siguiente para ir al tablero *@
 
 
+@* comenzamos *@
+
+@model IPC2_201700841.Models.ViewModels.ArchivoModel
+<h2>Cargar Archivo</h2>
+@using (Html.BeginForm("TableroSolitario", "Tablero", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{   
+        <div>
+            <div>
+                <!--div para el archivo-->
+                @*@Html.LabelFor(d => d.Archivo)*@
+                @Html.TextBoxFor(d => d.Archivo, new { type = "file", accept = ".xml" })
+                @Html.ValidationMessageFor(d => d.Archivo)
+            </div>
+            <div>
+                <input type="submit" value="Aceptar" />
+            </div>
+        </div>
+   
+    <p />
+    <p />
+    <p />
+}
+
+
+@* finalizamos *@
 <div class="botonTablero">
     <div class="col-md-4">
         <!--boton para cargar una partida guardada-->
