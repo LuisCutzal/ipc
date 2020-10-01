@@ -266,11 +266,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Master\Pagina_inicio_master.cshtml" />
-    <Content Include="Views\Home\Solitario.cshtml" />
     <Content Include="Views\Tablero\TableroSolitario.cshtml" />
+    <Content Include="Views\Tablero\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Archivos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -4,5 +4,51 @@
     Layout = "~/Views/Master/Pagina_inicio_master.cshtml";
 }
 
-<h2>TableroSolitario</h2>
+<style>
+    .t {
+        border: 1px solid black;
+    }
+
+    td {
+        height: 63px;
+        width: 63px;
+        background-image: url(../../img/verde.jpg);
+        border: 0px solid black;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<table class="t" align="center">
+    @for (int fila = 0; fila < 8; fila++)
+    {
+        <tr>
+            <!--fila-->
+            @for (int columna = 0; columna < 8; columna++)
+            {
+                <td>
+                    @foreach (var buscar in Model)
+                    {
+                        int inicio = ((int)char.ToUpper(char.Parse(buscar.columna))) - 64;
+                        if (inicio == columna + 1 && buscar.fila == fila + 1)
+                        {
+                            if (buscar.color == "blanco")
+                            {
+                                <img src="~/img/blanco.jpg" />
+                            }
+                            if (buscar.color == "negro")
+                            {
+                                <img src="~/img/negro.jpg" />
+                            }
+                        }
+                    }
+                </td>
+            }
+        </tr>
+    }
+</table>
 

@@ -7,65 +7,153 @@ using System.Web.Mvc;
 using System.IO;
 using System.Xml;
 using System.Data.SqlClient;
+using System.Web.WebSockets;
+using IPC2_201700841.Models;
+using Microsoft.Ajax.Utilities;
 
 namespace IPC2_201700841.Controllers
 {
     public class TableroController : Controller
     {
         // GET: Tablero
-        public ActionResult TableroSolitario()
+
+        public ActionResult Index()
         {
             return View();
         }
+
+        public ActionResult TableroSolitario()
+        {
+            /*ObtenerContenidoA i1 = new ObtenerContenidoA();
+            i1.color = "blanco";
+            i1.fila = 4;
+            i1.columna = "D";
+            ObtenerContenidoA i2 = new ObtenerContenidoA();
+            i2.color = "negro";
+            i2.fila = 4;
+            i2.columna = "E";
+            ObtenerContenidoA i3 = new ObtenerContenidoA();
+            i3.color = "negro";
+            i3.fila = 5;
+            i3.columna = "D";
+            ObtenerContenidoA i4 = new ObtenerContenidoA();
+            i4.color = "blanco";
+            i4.fila = 5;
+            i4.columna = "E";
+            List<ObtenerContenidoA> fichas = new List<ObtenerContenidoA>();
+            fichas.Add(i1);
+            fichas.Add(i2);
+            fichas.Add(i3);
+            fichas.Add(i4);
+            Session["juego"] = fichas;*/
+            return View("~/Views/Tablero/TableroSolitario.cshtml",(List<ObtenerContenidoA>)Session["juego"]);
+            
+        }
+
         [HttpPost]
-        public ActionResult TableroSolitario (ArchivoModel file)
+        public ActionResult Index (ArchivoModel file)
         {
             string ruta = Server.MapPath("~/");//raiz del proyecto
-            string RutaArchivo = Path.Combine(ruta + "/Archivo/ejemplo.xml");
+            string RutaArchivo = Path.Combine(ruta + "/Archivos/ejemplo.xml");
+            //string RutaArchivo = Path.Combine(ruta + "/Archivos/" + file + ".xml");
             if (!ModelState.IsValid)//si el modelo que estoy pasando es valido
             {
                 return View("Index", file); //model invalido
             }
             file.Archivo.SaveAs(RutaArchivo);
             XmlReader reader = XmlReader.Create(RutaArchivo);
-
-            /*este codigo es para insertar en la bd, 
-            no se usara ese connectionstring porque no usare la bd*/
-            /*using (SqlConnection sql1 = new SqlConnection(connectionString)) 
+            
+            List<ObtenerContenidoA> prueba = new List<ObtenerContenidoA>();
+            Session["juego"] = prueba;
+            ObtenerContenidoA ficha = new ObtenerContenidoA();
+            while (reader.Read()) 
             {
-                sql1.Open();
-                string prueba = " ";
-                while (reader.Read())
-                {
-                    if (reader.IsStartElement())
-                    {
-                        switch (reader.Name.ToString())
-                        {
-                            case "ficha":
-                                prueba += "insert into Archivo values(";
-                                break;
-                            case "color":
-                                prueba += "'" + reader.ReadString() + "'" + ",";
-                                break;
-                            case "columna":
-                                prueba += "'" + reader.ReadString() + "'" + ",";
-                                break;
-                            case "fila":
-                                prueba += reader.ReadString() + ");";
-                                if (prueba != "")
-                                {
-                                    SqlCommand sql2 = new SqlCommand(prueba, sql1);
-                                    sql2.ExecuteNonQuery();
-                                    prueba = "";
-                                }
-                                break;
-                        }
+                if (reader.IsStartElement()) {
+                    switch (reader.Name.ToString()) {
+                        case "color":
+                            ficha.color = reader.ReadString();
+                            System.Diagnostics.Debug.WriteLine(ficha.color);
+                            break;
+                        case "columna":
+                            ficha.columna = reader.ReadString();
+                            System.Diagnostics.Debug.WriteLine(ficha.columna   );
+                            break;
+                        case "fila":
+                            ficha.fila = Int32.Parse(reader.ReadString());
+                            System.Diagnostics.Debug.WriteLine(ficha.fila);
+                            prueba.Add(ficha);
+                            ficha = new ObtenerContenidoA();
+                            System.Diagnostics.Debug.WriteLine(prueba);
+                            break;
                     }
                 }
-                sql1.Close();
+            }
+            reader.Close();
+            /*if (Session["juego"]==null)
+            {
+                ObtenerContenidoA i1 = new ObtenerContenidoA();
+                i1.color = "blanco";
+                i1.fila = 4;
+                i1.columna = "D";
+                ObtenerContenidoA i2 = new ObtenerContenidoA();
+                i2.color = "negro";
+                i2.fila = 4;
+                i2.columna = "E";
+                ObtenerContenidoA i3 = new ObtenerContenidoA();
+                i3.color = "negro";
+                i3.fila = 5;
+                i3.columna = "D";
+                ObtenerContenidoA i4 = new ObtenerContenidoA();
+                i4.color = "blanco";
+                i4.fila = 5;
+                i4.columna = "E";
+                List<ObtenerContenidoA> fichas = new List<ObtenerContenidoA>();
+                fichas.Add(i1);
+                fichas.Add(i2);
+                fichas.Add(i3);
+                fichas.Add(i4);
+                Session["juego"] = fichas;
+                return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }*/
-            return View("TableroSolitario");
+
+
+            return View("Index");
         }
+
+        /*[HttpGet]
+        public FileResult CrearArchivo()
+        {
+            using (FaseIpc2_201700841Entities db = new FaseIpc2_201700841Entities())
+            {
+                var estar = new MemoryStream();
+                XmlWriterSettings config = new XmlWriterSettings();
+                config.Indent = true;
+                XmlWriter escribirxmml = XmlWriter.Create(estar, config);
+                escribirxmml.WriteStartDocument();
+                escribirxmml.WriteStartElement("tablero");
+                foreach (var busca in db.Archivo)
+                {
+                    escribirxmml.WriteStartElement("ficha");
+                    escribirxmml.WriteStartElement("color");
+                    escribirxmml.WriteString(busca.color);
+                    escribirxmml.WriteEndElement();
+                    escribirxmml.WriteStartElement("columna");
+                    escribirxmml.WriteString(busca.columna);
+                    escribirxmml.WriteEndElement();
+                    escribirxmml.WriteStartElement("fila");
+                    escribirxmml.WriteString(busca.fila.ToString());
+                    escribirxmml.WriteEndElement();
+                    escribirxmml.WriteEndElement();
+                }
+                escribirxmml.WriteEndElement();
+                escribirxmml.WriteEndDocument();
+                escribirxmml.Close();
+                estar.Position = 0;
+                var ArchivoResultado = File(estar, "application/octet-stream", " ");
+                return ArchivoResultado;
+
+            }
+        }*/
 
         /*public ActionResult TableroVersus()
         {
@@ -78,5 +166,8 @@ namespace IPC2_201700841.Controllers
         }
         
          esto es para los tableros de los otrso 2 modos*/
+
+
+
     }
 }
