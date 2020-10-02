@@ -52,3 +52,13 @@
     }
 </table>
 
+<h2>
+    Guardar Archivo
+</h2>
+@using (Html.BeginForm("CrearArchivo", "Tablero", FormMethod.Get, new { enctype = "multipart/form-data" }))
+{
+        <div class="col-md-4">
+            <!--boton para cargar una partida guardada-->
+            <button type="submit">Guardar</button>
+        </div>
+}
