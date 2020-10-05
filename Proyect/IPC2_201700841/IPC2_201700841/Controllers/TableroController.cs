@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Web.WebSockets;
 using IPC2_201700841.Models;
 using Microsoft.Ajax.Utilities;
+using System.Security.Cryptography.X509Certificates;
 
 namespace IPC2_201700841.Controllers
 {
@@ -17,10 +18,13 @@ namespace IPC2_201700841.Controllers
     //[HttpPost] //enviar informacion hacia una pagina web, cualquier tipo de informacion
     public class TableroController : Controller
     {
-        // GET: Tablero
+        
 
+        // GET: Tablero
+       
         public ActionResult Index()
         {
+            
             return View();
         }
 
@@ -50,6 +54,40 @@ namespace IPC2_201700841.Controllers
                 fichas.Add(i3);
                 fichas.Add(i4);
                 Session["juego"] = fichas;
+                var send = Environment.TickCount;
+                var random = new Random(send);
+                for (int i = 0; i <1; i++) 
+                {
+                    var valor = random.Next(0, 2); //valor random entre 0 y 1
+                    System.Diagnostics.Debug.WriteLine(valor);
+                    if (valor == 0) //fichas negras (computadora)
+                    {
+                        Session["turno"] = valor;
+                        /*si el valor = 0 entonces en la variable Session["turno"] coloco un valor
+                        con el fin de que no sea nulo esta variable para poder diferenciarla 
+                        de la variable nula la cual es para la ficha blanca*/
+                    }
+                    else //fichas blancas (usuario)
+                    {
+                        Session["turno"] = null;
+                        /*si el valor = 1 entonces en la variable Session["turno"] la creo nula
+                         con el fin de que se pueda diferenciar para el color negro*/
+                    }
+
+                    //if (Session["turno"] != null)
+                    //{
+                    //    var prueba = true;
+                    //    ViewData["valor"] = prueba;
+                    //}
+                    //else
+                    //{
+                    //    var prueba = false;
+                    //    ViewData["valor"] = prueba;
+                    //}
+
+
+
+                }
                 return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }
             else
@@ -57,21 +95,56 @@ namespace IPC2_201700841.Controllers
                 return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }
         }
+        
         [HttpPost]
-        public ActionResult Dato(int fila, string columna)
-        {
+        public ActionResult Dato(int fila, string columna) 
+        { //tengo que hacerlo para un juego en solitario
             try
             {
-                var Nfila = fila;
-                var Ncolumna = columna;
-                ObtenerContenidoA f1 = new ObtenerContenidoA();
-                f1.color = "negro";
-                f1.fila = Nfila;
-                f1.columna = Ncolumna;
-                //List<ObtenerContenidoA> ficha = new List<ObtenerContenidoA
-                List<ObtenerContenidoA> ficha = (List<ObtenerContenidoA>)Session["juego"];
-                ficha.Add(f1);
-                //Session["juego"] = ficha;
+                /*
+                 coloco un if(Session["turno"]!= null) para que si tiene un valor igual a 0
+                pueda crear una ficha de color negro*/
+                if (Session["turno"] != null) //fichas negras (computadora)
+                {
+                    System.Diagnostics.Debug.WriteLine("funciono cero");
+                    var Nfila = fila;
+                    var Ncolumna = columna;
+                    ObtenerContenidoA f1 = new ObtenerContenidoA();
+                    f1.color = "negro";
+                    f1.fila = Nfila;
+                    f1.columna = Ncolumna;
+                    //List<ObtenerContenidoA> ficha = new List<ObtenerContenidoA
+                    List<ObtenerContenidoA> ficha = (List<ObtenerContenidoA>)Session["juego"];
+                    ficha.Add(f1);
+                    //Session["juego"] = ficha;
+                }
+               /*coloco else para saber si la variable Session["turno"] = null
+               que a su vez sea un numero 1 el cual es el turno de la ficha color blanca*/
+                else
+                { //fichas blancas (usuario)
+                    System.Diagnostics.Debug.WriteLine("funciono uno");
+                    var Nfila = fila;
+                    var Ncolumna = columna;
+                    ObtenerContenidoA f1 = new ObtenerContenidoA();
+                    f1.color = "blanco";
+                    f1.fila = Nfila;
+                    f1.columna = Ncolumna;
+                    //List<ObtenerContenidoA> ficha = new List<ObtenerContenidoA
+                    List<ObtenerContenidoA> ficha = (List<ObtenerContenidoA>)Session["juego"];
+                    ficha.Add(f1);
+                    //Session["juego"] = ficha;
+                }
+
+                //var Nfila = fila;
+                //var Ncolumna = columna;
+                //ObtenerContenidoA f1 = new ObtenerContenidoA();
+                //f1.color = "negro";
+                //f1.fila = Nfila;
+                //f1.columna = Ncolumna;
+                ////List<ObtenerContenidoA> ficha = new List<ObtenerContenidoA
+                //List<ObtenerContenidoA> ficha = (List<ObtenerContenidoA>)Session["juego"];
+                //ficha.Add(f1);
+                ////Session["juego"] = ficha;
             }
             catch (Exception)
             {
