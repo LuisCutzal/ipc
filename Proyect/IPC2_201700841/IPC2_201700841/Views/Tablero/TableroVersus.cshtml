@@ -133,7 +133,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 espacio text-dark" style="font-weight:bold">
-            <form action="/Tablero/Dato" method="post">
+            <form action="/Tablero/InicioVersus" method="post">
+                @ViewBag.Mensaje
                 <h2>Tablero Versus</h2>
                 <label>Fila <input class="fila" type="text" id="fila" name="fila" style="color:black" /></label><label>(solo numeros)</label>
                 <br />
@@ -148,12 +149,12 @@
     </div>
 </div>
 
-<div class="container">
+@*<div class="container">
     <div class="row">
         <div class="col-md-3 uno text-dark" style="font-weight:bold">
-            <form action="/Tablero/inicio" method="post">
-                <input class="button" type="submit" value="inicio" name="inicio" id="incio" />
+            <form action="/Tablero/InicioVersus" method="post">
+                <input class="button1" type="submit" value="Iniciar Juego" name="inicio" id="incio" />
             </form>
         </div>
     </div>
-</div>
+</div>*@
