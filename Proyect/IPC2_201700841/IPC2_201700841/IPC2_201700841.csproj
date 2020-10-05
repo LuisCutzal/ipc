@@ -288,6 +288,7 @@
     <Content Include="Views\Master\Pagina_inicio_master.cshtml" />
     <Content Include="Views\Tablero\TableroSolitario.cshtml" />
     <Content Include="Views\Tablero\Index.cshtml" />
+    <Content Include="Views\Tablero\TableroVersus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
