@@ -13,6 +13,8 @@ using Microsoft.Ajax.Utilities;
 
 namespace IPC2_201700841.Controllers
 {
+    //[HttpGet] // este metodo para hacer una posicion de resivir informacion de una pagina
+    //[HttpPost] //enviar informacion hacia una pagina web, cualquier tipo de informacion
     public class TableroController : Controller
     {
         // GET: Tablero
@@ -55,7 +57,31 @@ namespace IPC2_201700841.Controllers
                 return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }
         }
+        [HttpPost]
+        public ActionResult Dato(int fila, string columna)
+        {
+            try
+            {
+                var Nfila = fila;
+                var Ncolumna = columna;
+                ObtenerContenidoA f1 = new ObtenerContenidoA();
+                f1.color = "negro";
+                f1.fila = Nfila;
+                f1.columna = Ncolumna;
+                //List<ObtenerContenidoA> ficha = new List<ObtenerContenidoA
+                List<ObtenerContenidoA> ficha = (List<ObtenerContenidoA>)Session["juego"];
+                ficha.Add(f1);
+                //Session["juego"] = ficha;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
 
+        }
+
+        //no tocar nada
         [HttpPost]
         public ActionResult Index (ArchivoModel file)
         {
@@ -95,13 +121,10 @@ namespace IPC2_201700841.Controllers
                                 //System.Diagnostics.Debug.WriteLine(prueba);
                                 break;
                         }
-                        
                     }
                 }
                 reader.Close();
             }
-            //ViewBag.juego = Session["juego"] as List<ObtenerContenidoA>();
-           
             return View("Index");
         }
         [HttpGet]
@@ -143,7 +166,7 @@ namespace IPC2_201700841.Controllers
             var ArchivoResultado = File(estar, "application/octet-stream", " ");
             return ArchivoResultado;
         }
-
+        //termina no tocar nada
         /*public ActionResult TableroVersus()
         {
             return View();
