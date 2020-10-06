@@ -6,7 +6,7 @@
 
 
 
-<link href="~/Content/Tablero_Solitario.css" rel="stylesheet" />
+<link href="~/Content/Tablero_Versus.css" rel="stylesheet" />
 <table class="t">
     @for (int fila = 0; fila < 9; fila++)
     {
@@ -149,12 +149,13 @@
     </div>
 </div>
 
-@*<div class="container">
+<div class="container">
     <div class="row">
         <div class="col-md-3 uno text-dark" style="font-weight:bold">
-            <form action="/Tablero/InicioVersus" method="post">
+            <form action="/Tablero/TableroVersus" method="post">
+                <label>Primer Jugador, elige el color de tu ficha (blanco o negro)<input class="f" type="text" id="f" name="f" style="color:black" /></label>
                 <input class="button1" type="submit" value="Iniciar Juego" name="inicio" id="incio" />
             </form>
         </div>
     </div>
-</div>*@
+</div>

@@ -202,6 +202,7 @@
     <Content Include="Content\Index.css" />
     <Content Include="Content\Paginas_Varias.css" />
     <Content Include="Content\Tablero_Solitario.css" />
+    <Content Include="Content\Tablero_Versus.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -131,10 +131,12 @@ namespace IPC2_201700841.Controllers
             }
             return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
         }
-        public ActionResult TableroVersus()
+        public ActionResult TableroVersus(string f)
         {
             if (Session["juego"] == null)
             {
+                int contadorF1 = 0;
+                int contadorF2 = 0;
                 ObtenerContenidoA i1 = new ObtenerContenidoA();
                 i1.color = "blanco";
                 i1.fila = 4;
@@ -157,29 +159,41 @@ namespace IPC2_201700841.Controllers
                 fichas.Add(i3);
                 fichas.Add(i4);
                 Session["juego"] = fichas;
-                var send = Environment.TickCount;
-                var random = new Random(send);
-                for (int i = 0; i < 1; i++)
+                //var send = Environment.TickCount;
+                //var random = new Random(send);
+                //for (int i = 0; i < 1; i++)
+                //{
+                //    var valor = random.Next(0, 2); //valor random entre 0 y 1
+                //    System.Diagnostics.Debug.WriteLine(valor);
+                //    if (valor == 0) //fichas negras (jugador 1)
+                //    {
+                //        Session["turno"] = valor;
+                //        ViewBag.Mensaje = "Turno fichas negras";
+                //        /*si el valor = 0 entonces en la variable Session["turno"] coloco un valor
+                //        con el fin de que no sea nulo esta variable para poder diferenciarla 
+                //        de la variable nula la cual es para la ficha blanca*/
+                //    }
+                //    else //fichas blancas (usuario)
+                //    {
+                //        Session["turno"] = null;
+                //        ViewBag.Mensaje = "Turno fichas blancas";
+                //        /*si el valor = 1 entonces en la variable Session["turno"] la creo nula
+                //         con el fin de que se pueda diferenciar para el color negro*/
+                //        contadorF2++;
+                //        System.Diagnostics.Debug.WriteLine(contadorF2);
+                //    }
+                //}
+                if (f == "blanco") //para cuando cualquier usuario eliga una ficha de color negro le toca segundo
                 {
-                    var valor = random.Next(0, 2); //valor random entre 0 y 1
-                    System.Diagnostics.Debug.WriteLine(valor);
-                    if (valor == 0) //fichas negras (jugador 1)
-                    {
-                        Session["turno"] = valor;
-                        ViewBag.Mensaje = "Turno fichas negras";
-                        /*si el valor = 0 entonces en la variable Session["turno"] coloco un valor
-                        con el fin de que no sea nulo esta variable para poder diferenciarla 
-                        de la variable nula la cual es para la ficha blanca*/
+                    var cero = 0;
+                    Session["turno"] =cero;
+                    //ViewBag.Mensaje = "Turno fichas blancas";
 
-                    }
-                    else //fichas blancas (usuario)
-                    {
-                        Session["turno"] = null;
-                        ViewBag.Mensaje = "Turno fichas blancas";
-                        /*si el valor = 1 entonces en la variable Session["turno"] la creo nula
-                         con el fin de que se pueda diferenciar para el color negro*/
-
-                    }
+                }
+                else //para cuando el usuario eligio una ficha de color blanco le toca primero
+                {
+                    Session["turno"] = null;
+                    //ViewBag.Mensaje = "Turno fichas negras";
                 }
                 return View("~/Views/Tablero/TableroVersus.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }
@@ -188,13 +202,15 @@ namespace IPC2_201700841.Controllers
                 return View("~/Views/Tablero/TableroVersus.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }
         }
+
         [HttpPost]
         public ActionResult InicioVersus(int fila,string columna) 
         {
             try
             {
-                if (Session["turno"] != null)
+                if (Session["turno"] == null) //fichas color negro
                 {
+                    ViewBag.Mensaje = "Turno fichas blancas";
                     var NfilaV = fila;
                     var NcolumnaV = columna;
                     ObtenerContenidoA f1 = new ObtenerContenidoA();
@@ -203,11 +219,14 @@ namespace IPC2_201700841.Controllers
                     f1.columna = NcolumnaV;
                     List<ObtenerContenidoA> ficha = (List<ObtenerContenidoA>)Session["juego"];
                     ficha.Add(f1);
-                    Session["turno"] = null;
+                    int valor = 1;
+                    Session["turno"] = valor;
                     
+                   
                 }
-                else 
+                else //turno para fichas blancas
                 {
+                    ViewBag.Mensaje = "Turno fichas negras";
                     var NfilaV = fila;
                     var NcolumnaV = columna;
                     ObtenerContenidoA f1 = new ObtenerContenidoA();
@@ -216,8 +235,7 @@ namespace IPC2_201700841.Controllers
                     f1.columna = NcolumnaV;
                     List<ObtenerContenidoA> ficha = (List<ObtenerContenidoA>)Session["juego"];
                     ficha.Add(f1);
-                    int valor = 1;
-                    Session["turno"] = valor;
+                    Session["turno"] = null;
                 }
             }
             catch (Exception)
