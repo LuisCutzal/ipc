@@ -20,6 +20,7 @@ namespace IPC2_201700841.Controllers
             //   ViewBag.Message = TempData["Message"].ToString();
             try
             {
+                
                 using (Proyecto_IPC2 baseDatos = new Proyecto_IPC2()) //entitis es el entity framework
                 {
                     var lista = from datos in baseDatos.Usuario
