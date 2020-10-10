@@ -3827,15 +3827,963 @@ namespace IPC2_201700841.Controllers
                     }
                     if (NfilaV == 6 && NcolumnaV == "H")
                     {
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 8 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
 
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 7 && NcolumnaV == "H")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 8 && NcolumnaV == "H")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila ==4 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "H" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     contadorf1++;
                     System.Diagnostics.Debug.WriteLine(contadorf1 + "segundo turno");
@@ -4178,26 +5126,1624 @@ namespace IPC2_201700841.Controllers
                     }
                     if (NfilaV == 1 && NcolumnaV == "B")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                            
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 2 && NcolumnaV == "B")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 2 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 4 && NcolumnaV == "B")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 5 && NcolumnaV == "B")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 7 && NcolumnaV == "B")
                     {
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 8 && NcolumnaV == "B")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     contadorf1++;
                     System.Diagnostics.Debug.WriteLine(contadorf1 + "segundo turno");
@@ -4206,16 +6752,802 @@ namespace IPC2_201700841.Controllers
                 {
                     if (NfilaV == 1 && NcolumnaV == "C")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 8 && NcolumnaV == "C")
                     {
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 8 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
 
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 1 && NcolumnaV == "D")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
+                    /* VEREMOS
                     if (NfilaV == 4 && NcolumnaV == "D")
                     {
 
@@ -4223,10 +7555,264 @@ namespace IPC2_201700841.Controllers
                     if (NfilaV == 5 && NcolumnaV == "D") 
                     {
 
-                    }
+                    } VEREMOS */
                     if (NfilaV == 8 && NcolumnaV == "D")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 4 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     contadorf1++;
                     System.Diagnostics.Debug.WriteLine(contadorf1 + "segundo turno");
@@ -4235,8 +7821,263 @@ namespace IPC2_201700841.Controllers
                 {
                     if (NfilaV == 1 && NcolumnaV == "E")
                     {
-
-                    }
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                    /* VEREMOS
                     if (NfilaV == 4 && NcolumnaV == "E")
                     {
 
@@ -4244,18 +8085,554 @@ namespace IPC2_201700841.Controllers
                     if (NfilaV == 5 && NcolumnaV == "E")
                     {
 
-                    }
+                    } VEREMOS*/
                     if (NfilaV == 1 && NcolumnaV == "F")
                     {
-
-                    }
-                    if (NfilaV == 5 && NcolumnaV == "F")
-                    {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 8 && NcolumnaV == "F")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 8 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "H" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "F" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     contadorf1++;
                     System.Diagnostics.Debug.WriteLine(contadorf1 + "segundo turno");
@@ -4264,27 +8641,1623 @@ namespace IPC2_201700841.Controllers
                 {
                     if (NfilaV == 1 && NcolumnaV == "G")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 1 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 2 && NcolumnaV == "G")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 2 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 4 && NcolumnaV == "G")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 5 && NcolumnaV == "G")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 5 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 7 && NcolumnaV == "G")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 7 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 1 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (NfilaV == 8 && NcolumnaV == "G")
                     {
-
+                        foreach (var item in Session["juego"] as List<ObtenerContenidoA>)
+                        {
+                            if (item.fila == 1 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 2 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "G" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "G" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 8 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 8 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 2 && item.columna == "A" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 3 && item2.columna == "B" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 3 && item.columna == "B" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 4 && item2.columna == "C" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 4 && item.columna == "C" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 5 && item2.columna == "D" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 5 && item.columna == "D" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 6 && item2.columna == "E" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                            if (item.fila == 6 && item.columna == "E" && item.color == "negro")
+                            {
+                                foreach (var item2 in Session["juego"] as List<ObtenerContenidoA>)
+                                {
+                                    if (item2.fila == 7 && item2.columna == "F" && item2.color == "blanco")
+                                    {
+                                        item2.color = "negro";
+                                    }
+                                }
+                            }
+                        }
                     }
                     contadorf1++;
                     System.Diagnostics.Debug.WriteLine(contadorf1 + "segundo turno");
