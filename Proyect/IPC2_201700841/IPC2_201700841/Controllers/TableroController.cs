@@ -12,6 +12,7 @@ using IPC2_201700841.Models;
 using Microsoft.Ajax.Utilities;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
+using System.Web.UI.Adapters;
 
 namespace IPC2_201700841.Controllers
 {
@@ -74,15 +75,24 @@ namespace IPC2_201700841.Controllers
         [HttpPost]
         public ActionResult InicioSolitario() //esto es para cuando estamos en el modo solitario
         {
+            
             return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
         }
-
         public ActionResult MovimientoSolitario(int fila, string columna) //tablero modo solitario
         {
-           
+            var inicio = (List<ObtenerContenidoA>)Session["juego"]; //lista piesas
+            string turnoJugando = "";
+            ObtenerContenidoA FichaPrimero = new ObtenerContenidoA();
+            FichaPrimero.color = CambiarTurno(turnoJugando);
+            FichaPrimero.fila = fila;
+            FichaPrimero.columna = columna.ToUpper();
+            if (PrimeraCondicion(inicio, FichaPrimero))
+            {
+                inicio.Add(FichaPrimero);
+            }
             return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
         }
-        public ActionResult TableroVersus(string f)
+        public ActionResult TableroVersus(string f) //ya esta esto, no tocar
         {
             if (Session["juego"] == null)
             {
@@ -128,45 +138,353 @@ namespace IPC2_201700841.Controllers
         public ActionResult Movimiento(int fila, string columna) //tablero modo versus
         {
             var inicio = (List<ObtenerContenidoA>)Session["juego"]; //lista piesas
-            string turnoJugando ="";
+            string turnoJugando = "";
             ObtenerContenidoA FichaPrimero = new ObtenerContenidoA();
             FichaPrimero.color = CambiarTurno(turnoJugando);
             FichaPrimero.fila = fila;
             FichaPrimero.columna = columna.ToUpper();
-            if (PrimeraCondicion(inicio,FichaPrimero))
+            if (PrimeraCondicion(inicio, FichaPrimero))
             {
-                inicio.Add(FichaPrimero); 
+                inicio.Add(FichaPrimero);
             }
+
             return View("~/Views/Tablero/TableroVersus.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
         }
         //inicio metodo para cambiar turno
         public string CambiarTurno(string turnoJugando) //cambia cualquier turno
         {
             int i = 0;
+            int cont1 = 0;
+            int cont2 = 0;
             if (Session["turno"] == null)
-            {
+            { /*colocar un if para Calculando (calculando posibilidades)
+               si encuentra posibilidades hace lo que esta abajo, dado caso no
+                encuentra posibilidades pasa turno*/
                 ViewBag.Mensaje = "Turno fichas blancas";
                 turnoJugando = "negro";
                 Session["turno"] = i;
             }
             else //blancas
-            {
+            {/*colocar un if para Calculando (calculando posibilidades)
+            si encuentra posibilidades hace lo que esta abajo, dado caso no
+            encuentra posibilidades pasa turno*/
                 ViewBag.Mensaje = "Turno fichas negras";
                 turnoJugando = "blanco";
                 Session["turno"] = null;
             }
+           
+            if (cont1>=2)
+            {
+                System.Diagnostics.Debug.WriteLine("fin de turnos negros");
+            }
+            if (cont2>=2)
+            {
+                System.Diagnostics.Debug.WriteLine("fin de turnos blancos");
+            }
+           
             return turnoJugando;
         }
+
+
         //fin metodo para cambiar turno
-
-
-        public bool Calculando() //calcula las jugadas que pueden haber 
+        public bool Calculando(List<ObtenerContenidoA> inicio, ObtenerContenidoA FichaPrimero) //le llega todas las fichas, recive la ficha y usa la conidcion
         {
-            
-
+            //posibilidades a donde puede moverse la ficha
+            bool valido = false;
+            int columnaEntrando = ((int)char.ToUpper(char.Parse(FichaPrimero.columna))) - 64;
+            foreach (var item in inicio)
+            {
+                int itemColumna = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
+                if (FichaPrimero.fila - 1 <= item.fila && item.fila <= FichaPrimero.fila + 1)
+                {//las filas que estan entre la ficha que quiero agregar
+                    if (columnaEntrando - 1 <= itemColumna && itemColumna <= columnaEntrando + 1)
+                    {//las columnas que estan entre la ficha que quiero agregar
+                        if (FichaPrimero.color != item.color) //validacion para que los colores no sean iguales
+                        {
+                            if (MovRealizar(inicio, FichaPrimero, item))
+                            {
+                                valido = true;
+                            }
+                        }
+                    }
+                }
+            }
+            return valido;
         }
-
-
+        public bool MovRealizar(List<ObtenerContenidoA> inicio, ObtenerContenidoA FichaPrimero, ObtenerContenidoA item)
+        {
+            int columnaEntrando = ((int)char.ToUpper(char.Parse(FichaPrimero.columna))) - 64;
+            int itemColumna = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
+            int RestandoColumnas = columnaEntrando - itemColumna;
+            int RestadoFila = FichaPrimero.fila - item.fila;
+            bool valido = false;
+            if (RestandoColumnas == 0 && RestadoFila == 1) //abajo
+            {
+                int MoviendoFila = item.fila;
+                ObtenerContenidoA SiBusqueda = new ObtenerContenidoA();
+                List<ObtenerContenidoA> GirandoFichas = new List<ObtenerContenidoA>();
+                while (SiBusqueda != null)
+                {
+                    SiBusqueda = null;
+                    foreach (var item2 in inicio)
+                    {
+                        if (item2.columna == FichaPrimero.columna)
+                        {
+                            if (item2.fila == MoviendoFila)
+                            {
+                                if (item2.color != FichaPrimero.color)
+                                {
+                                    SiBusqueda = item2;
+                                    GirandoFichas.Add(item2);
+                                }
+                                else if (item2.color == FichaPrimero.color)
+                                {
+                                    SiBusqueda = null;
+                                    valido = true;
+                                    //  CambiaColor(GirandoFichas);
+                                }
+                            }
+                        }
+                    }
+                    MoviendoFila--; //abajo
+                }
+            }
+            if (RestandoColumnas == 0 && RestadoFila == -1) //arriba
+            {
+                int MoviendoFila = item.fila;
+                ObtenerContenidoA SiBusqueda = new ObtenerContenidoA();
+                List<ObtenerContenidoA> GirandoFichas = new List<ObtenerContenidoA>();
+                while (SiBusqueda != null)
+                {
+                    SiBusqueda = null;
+                    foreach (var item2 in inicio)
+                    {
+                        if (item2.columna == FichaPrimero.columna)
+                        {
+                            if (item2.fila == MoviendoFila)
+                            {
+                                if (item2.color != FichaPrimero.color)
+                                {
+                                    SiBusqueda = item2;
+                                    GirandoFichas.Add(item2);
+                                }
+                                else if (item2.color == FichaPrimero.color)
+                                {
+                                    SiBusqueda = null;
+                                    valido = true;
+                                    //  CambiaColor(GirandoFichas);
+                                }
+                            }
+                        }
+                    }
+                    MoviendoFila++; //arriba
+                }
+            }
+            if (RestandoColumnas == 1 && RestadoFila == 0) //derecha
+            {
+                int MoviendoColuma = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
+                ObtenerContenidoA SiBusqueda = new ObtenerContenidoA();
+                List<ObtenerContenidoA> GirandoFichas = new List<ObtenerContenidoA>();
+                while (SiBusqueda != null)
+                {
+                    SiBusqueda = null;
+                    foreach (var item2 in inicio)
+                    {
+                        int Colum = ((int)char.ToUpper(char.Parse(item2.columna))) - 64;
+                        if (Colum == MoviendoColuma)
+                        {
+                            if (item2.fila == FichaPrimero.fila)
+                            {
+                                if (item2.color != FichaPrimero.color)
+                                {
+                                    SiBusqueda = item2;
+                                    GirandoFichas.Add(item2);
+                                }
+                                else if (item2.color == FichaPrimero.color)
+                                {
+                                    SiBusqueda = null;
+                                    valido = true;
+                                    // CambiaColor(GirandoFichas);
+                                }
+                            }
+                        }
+                    }
+                    MoviendoColuma--; //derecha
+                }
+            }
+            if (RestandoColumnas == -1 && RestadoFila == 0) //izquierda
+            {
+                int MoviendoColuma = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
+                ObtenerContenidoA SiBusqueda = new ObtenerContenidoA();
+                List<ObtenerContenidoA> GirandoFichas = new List<ObtenerContenidoA>();
+                while (SiBusqueda != null)
+                {
+                    SiBusqueda = null;
+                    foreach (var item2 in inicio)
+                    {
+                        int Colum = ((int)char.ToUpper(char.Parse(item2.columna))) - 64;
+                        if (Colum == MoviendoColuma)
+                        {
+                            if (item2.fila == FichaPrimero.fila)
+                            {//ficha que ya esta en el tablero, ficha que agregue
+                                if (item2.color != FichaPrimero.color)
+                                {
+                                    SiBusqueda = item2;
+                                    GirandoFichas.Add(item2);
+                                }
+                                /*cuando pasa lo de arriba, quiere decir que si hay una ficha para cambiar el color
+                                se hace esta otra condicion para saber si hay un color igual a la ficha que estamos agregando
+                                si, si lo hay entonces entra a la condicion*/
+                                else if (item2.color == FichaPrimero.color)
+                                {
+                                    SiBusqueda = null;
+                                    valido = true;
+                                    //  CambiaColor(GirandoFichas);
+                                }
+                            }
+                        }
+                    }
+                    MoviendoColuma++; //izquierda
+                }
+            }
+            if (RestandoColumnas == -1 && RestadoFila == 1) //diagonal inferior izquirda
+            {
+                int MoviendoFila = item.fila;
+                int MoviendoColuma = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
+                ObtenerContenidoA SiBusqueda = new ObtenerContenidoA();
+                List<ObtenerContenidoA> GirandoFichas = new List<ObtenerContenidoA>();
+                while (SiBusqueda != null)
+                {
+                    SiBusqueda = null;
+                    foreach (var item2 in inicio)
+                    {
+                        int Colum = ((int)char.ToUpper(char.Parse(item2.columna))) - 64;
+                        if (Colum == MoviendoColuma)
+                        {
+                            if (item2.fila == MoviendoFila)
+                            {
+                                if (item2.color != FichaPrimero.color)
+                                {
+                                    SiBusqueda = item2;
+                                    GirandoFichas.Add(item2);
+                                }
+                                else if (item2.color == FichaPrimero.color)
+                                {
+                                    SiBusqueda = null;
+                                    valido = true;
+                                    //  CambiaColor(GirandoFichas);
+                                }
+                            }
+                        }
+                    }
+                    MoviendoFila--; //abajo
+                    MoviendoColuma++; //izquierda
+                }
+            }
+            if (RestandoColumnas == 1 && RestadoFila == 1) //diagonal inferior derecha
+            {
+                int MoviendoFila = item.fila;
+                int MoviendoColuma = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
+                ObtenerContenidoA SiBusqueda = new ObtenerContenidoA();
+                List<ObtenerContenidoA> GirandoFichas = new List<ObtenerContenidoA>();
+                while (SiBusqueda != null)
+                {
+                    SiBusqueda = null;
+                    foreach (var item2 in inicio)
+                    {
+                        int Colum = ((int)char.ToUpper(char.Parse(item2.columna))) - 64;
+                        if (Colum == MoviendoColuma)
+                        {
+                            if (item2.fila == MoviendoFila)
+                            {
+                                if (item2.color != FichaPrimero.color)
+                                {
+                                    SiBusqueda = item2;
+                                    GirandoFichas.Add(item2);
+                                }
+                                else if (item2.color == FichaPrimero.color)
+                                {
+                                    SiBusqueda = null;
+                                    valido = true;
+                                    // CambiaColor(GirandoFichas);
+                                }
+                            }
+                        }
+                    }
+                    MoviendoFila--; //abajo
+                    MoviendoColuma--; //derecha
+                }
+            }
+            if (RestandoColumnas == -1 && RestadoFila == -1) //diagonal superior izquierda
+            {
+                int MoviendoFila = item.fila;
+                int MoviendoColuma = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
+                ObtenerContenidoA SiBusqueda = new ObtenerContenidoA();
+                List<ObtenerContenidoA> GirandoFichas = new List<ObtenerContenidoA>();
+                while (SiBusqueda != null)
+                {
+                    SiBusqueda = null;
+                    foreach (var item2 in inicio)
+                    {
+                        int Colum = ((int)char.ToUpper(char.Parse(item2.columna))) - 64;
+                        if (Colum == MoviendoColuma)
+                        {
+                            if (item2.fila == MoviendoFila)
+                            {
+                                if (item2.color != FichaPrimero.color)
+                                {
+                                    SiBusqueda = item2;
+                                    GirandoFichas.Add(item2);
+                                }
+                                else if (item2.color == FichaPrimero.color)
+                                {
+                                    SiBusqueda = null;
+                                    valido = true;
+                                    // CambiaColor(GirandoFichas);
+                                }
+                            }
+                        }
+                    }
+                    MoviendoFila++; //arriba
+                    MoviendoColuma++; //izquierda
+                }
+            }
+            if (RestandoColumnas == 1 && RestadoFila == -1) //diagonal superior derecha
+            {
+                int MoviendoFila = item.fila;
+                int MoviendoColuma = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
+                ObtenerContenidoA SiBusqueda = new ObtenerContenidoA();
+                List<ObtenerContenidoA> GirandoFichas = new List<ObtenerContenidoA>();
+                while (SiBusqueda != null)
+                {
+                    SiBusqueda = null;
+                    foreach (var item2 in inicio)
+                    {
+                        int Colum = ((int)char.ToUpper(char.Parse(item2.columna))) - 64;
+                        if (Colum == MoviendoColuma)
+                        {
+                            if (item2.fila == MoviendoFila)
+                            {
+                                if (item2.color != FichaPrimero.color)
+                                {
+                                    SiBusqueda = item2;
+                                    GirandoFichas.Add(item2);
+                                }
+                                else if (item2.color == FichaPrimero.color)
+                                {
+                                    SiBusqueda = null;
+                                    valido = true;
+                                    //CambiaColor(GirandoFichas);
+                                }
+                            }
+                        }
+                    }
+                    MoviendoFila++; //arriba
+                    MoviendoColuma--; //derecha
+                }
+            }
+            return valido;
+        }
 
         //ya no tocar nada
         //
@@ -174,16 +492,18 @@ namespace IPC2_201700841.Controllers
         //
         public bool PrimeraCondicion(List<ObtenerContenidoA> inicio, ObtenerContenidoA FichaPrimero) //le llega todas las fichas, recive la ficha y usa la conidcion
         {
+            //posibilidades a donde puede moverse la ficha
             bool valido = false;
+            //no tiene ningun valor = toma la letra Mayuscula ingresada y la transforma en codigo ASSI para luego sumarle -64
             int columnaEntrando = ((int)char.ToUpper(char.Parse(FichaPrimero.columna))) - 64;
             foreach (var item in inicio)
             {
                 int itemColumna = ((int)char.ToUpper(char.Parse(item.columna))) - 64;
                 if (FichaPrimero.fila - 1 <= item.fila && item.fila <= FichaPrimero.fila + 1)
-                {
+                {//las filas que estan entre la ficha que quiero agregar
                     if (columnaEntrando - 1 <= itemColumna && itemColumna <= columnaEntrando + 1)
-                    {
-                        if (FichaPrimero.color != item.color)
+                    {//las columnas que estan entre la ficha que quiero agregar
+                        if (FichaPrimero.color != item.color) //validacion para que los colores no sean iguales
                         {
                             if (SegundaCondicion(inicio, FichaPrimero, item))
                             {
@@ -315,12 +635,15 @@ namespace IPC2_201700841.Controllers
                         if (Colum == MoviendoColuma)
                         {
                             if (item2.fila == FichaPrimero.fila)
-                            {
+                            {//ficha que ya esta en el tablero, ficha que agregue
                                 if (item2.color != FichaPrimero.color)
                                 {
                                     SiBusqueda = item2;
                                     GirandoFichas.Add(item2);
-                                }
+                                } 
+                                /*cuando pasa lo de arriba, quiere decir que si hay una ficha para cambiar el color
+                                se hace esta otra condicion para saber si hay un color igual a la ficha que estamos agregando
+                                si, si lo hay entonces entra a la condicion*/
                                 else if (item2.color == FichaPrimero.color)
                                 {
                                     SiBusqueda = null;
@@ -487,6 +810,9 @@ namespace IPC2_201700841.Controllers
             }
         }
         //fin del metodo cambiar color
+        
+        
+        
         //no tocar nada
         [HttpPost]
         public ActionResult Index (ArchivoModel file)
