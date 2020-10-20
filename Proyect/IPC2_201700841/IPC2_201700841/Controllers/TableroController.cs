@@ -180,11 +180,11 @@ namespace IPC2_201700841.Controllers
                 {
                     Session["turno"] = null;
                 }
-                return View("~/Views/Tablero/TableroSolitarioInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+                return View("~/Views/Tablero/TableroSolitarioXtream.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }
             else
             {
-                return View("~/Views/Tablero/TableroSolitarioInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+                return View("~/Views/Tablero/TableroSolitarioXtream.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }
         }
 
@@ -1035,11 +1035,43 @@ namespace IPC2_201700841.Controllers
             {
                 if (item3.color == "negro")
                 {
-                    item3.color = "blanco";
+                    item3.color = "blanco"; //para cambiar el color de la ficha negra a blanca
                 }
-                else
+                else if (item3.color=="azul")
                 {
-                    item3.color = "negro";
+                    item3.color = "gris";
+                }
+                else if (item3.color=="gris")
+                {
+                    item3.color = "azul";
+                }
+                else if (item3.color == "rojo")
+                {
+                    item3.color = "amarillo";
+                }
+                else if (item3.color == "amarillo")
+                {
+                    item3.color = "rojo";
+                }
+                else if (item3.color == "naranja")
+                {
+                    item3.color = "violeta";
+                }
+                else if (item3.color == "violeta")
+                {
+                    item3.color = "naranja";
+                }
+                else if (item3.color == "celeste")
+                {
+                    item3.color = "verde1";
+                }
+                else if (item3.color == "verde1")
+                {
+                    item3.color = "celeste";
+                }
+                else //item.color=="blanco"
+                {
+                    item3.color = "negro"; //para cambiar el color de la ficha blanca a negra
                 }
             }
         }

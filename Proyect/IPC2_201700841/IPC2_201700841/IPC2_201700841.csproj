@@ -217,9 +217,12 @@
     <Content Include="img\7.jpg" />
     <Content Include="img\8.jpg" />
     <Content Include="img\a.jpg" />
+    <Content Include="img\amarillo.jpg" />
+    <Content Include="img\azul.jpg" />
     <Content Include="img\B.jpg" />
     <Content Include="img\blanco.jpg" />
     <Content Include="img\C.jpg" />
+    <Content Include="img\celeste.jpg" />
     <Content Include="img\D.jpg" />
     <Content Include="img\E.jpg" />
     <Content Include="img\f.jpg" />
@@ -227,14 +230,19 @@
     <Content Include="img\fondo1.jpg" />
     <Content Include="img\G.jpg" />
     <Content Include="img\game.jpg" />
+    <Content Include="img\gris.jpg" />
     <Content Include="img\H.jpg" />
     <Content Include="img\juegos.jpg" />
+    <Content Include="img\naranja.jpg" />
     <Content Include="img\negro.jpg" />
     <Content Include="img\othello.png" />
+    <Content Include="img\rojo.jpg" />
     <Content Include="img\si.jpg" />
     <Content Include="img\sii.jpg" />
     <Content Include="img\siii.jpg" />
     <Content Include="img\verde.jpg" />
+    <Content Include="img\verde1.jpg" />
+    <Content Include="img\violeta.jpg" />
     <Content Include="Models\IPC.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IPC.Context.cs</LastGenOutput>
