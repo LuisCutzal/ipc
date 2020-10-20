@@ -291,6 +291,16 @@
     <Content Include="Views\Tablero\Index.cshtml" />
     <Content Include="Views\Tablero\TableroVersus.cshtml" />
     <Content Include="Views\Tablero\IndexVersus.cshtml" />
+    <Content Include="Views\Tablero\ElegirModo_Solitario.cshtml" />
+    <Content Include="Views\Tablero\ElegirModo_Versus.cshtml" />
+    <Content Include="Views\Tablero\IndexInversoSolitario.cshtml" />
+    <Content Include="Views\Tablero\TableroSolitarioInverso.cshtml" />
+    <Content Include="Views\Tablero\TableroSolitarioXtream.cshtml" />
+    <Content Include="Views\Tablero\IndexXtreamSolitario.cshtml" />
+    <Content Include="Views\Tablero\IndexInversoVersus.cshtml" />
+    <Content Include="Views\Tablero\IndexXtreamVersus.cshtml" />
+    <Content Include="Views\Tablero\TableroVersusInverso.cshtml" />
+    <Content Include="Views\Tablero\TableroVersusXtream.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewBag.Title = "TableroVersusInverso";
+    Layout = "~/Views/Master/Pagina_inicio_master.cshtml";
+}
+
+
+
+<link href="~/Content/Tablero_Versus.css" rel="stylesheet" />
+<table class="t">
+    @for (int fila = 0; fila < 9; fila++)
+    {
+        <tr>
+            <!--fila-->
+            @for (int columna = 0; columna < 9; columna++)
+            {
+                <td>
+                    @foreach (var buscar in Model)
+                    {
+                        int inicio = ((int)char.ToUpper(char.Parse(buscar.columna))) - 64;
+                        if (inicio == columna && buscar.fila == fila)
+                        {
+                            if (buscar.color == "blanco")
+                            {
+                                <img src="~/img/blanco.jpg" />
+                            }
+                            if (buscar.color == "negro")
+                            {
+                                <img src="~/img/negro.jpg" />
+                            }
+                        }
+                    }
+                    @if (fila == 0 && columna == 0)
+                    {
+                        <img src="~/img/0.jpg" />
+                    }
+                    @if (fila == 0 && columna == 1)
+                    {
+                        <img src="~/img/a.jpg" />
+                    }
+                    @if (fila == 0 && columna == 2)
+                    {
+                        <img src="~/img/B.jpg" />
+                    }
+                    @if (fila == 0 && columna == 3)
+                    {
+                        <img src="~/img/c.jpg" />
+                    }
+                    @if (fila == 0 && columna == 4)
+                    {
+                        <img src="~/img/D.jpg" />
+                    }
+                    @if (fila == 0 && columna == 5)
+                    {
+                        <img src="~/img/E.jpg" />
+                    }
+                    @if (fila == 0 && columna == 6)
+                    {
+                        <img src="~/img/f.jpg" />
+                    }
+                    @if (fila == 0 && columna == 7)
+                    {
+                        <img src="~/img/G.jpg" />
+                    }
+                    @if (fila == 0 && columna == 8)
+                    {
+                        <img src="~/img/H.jpg" />
+                    }
+                    @if (fila == 1 && columna == 0)
+                    {
+                        <img src="~/img/1.jpg" />
+                    }
+                    @if (fila == 2 && columna == 0)
+                    {
+                        <img src="~/img/2.jpg" />
+                    }
+                    @if (fila == 3 && columna == 0)
+                    {
+                        <img src="~/img/3.jpg" />
+                    }
+                    @if (fila == 4 && columna == 0)
+                    {
+                        <img src="~/img/4.jpg" />
+                    }
+                    @if (fila == 5 && columna == 0)
+                    {
+                        <img src="~/img/5.jpg" />
+                    }
+                    @if (fila == 6 && columna == 0)
+                    {
+                        <img src="~/img/6.jpg" />
+                    }
+                    @if (fila == 7 && columna == 0)
+                    {
+                        <img src="~/img/7.jpg" />
+                    }
+                    @if (fila == 8 && columna == 0)
+                    {
+                        <img src="~/img/8.jpg" />
+                    }
+                </td>
+            }
+        </tr>
+    }
+</table>
+
+<div class="Boton_guardar">
+    <h3 style="font-weight:bold">
+        Guardar Archivo
+    </h3>
+    @using (Html.BeginForm("CrearArchivo", "Tablero", FormMethod.Get, new { enctype = "multipart/form-data" }))
+    {
+        <div class="col-md-3 btn text-dark" style="color:black">
+            <!--boton para cargar una partida guardada-->
+            <button type="submit">Guardar</button>
+        </div>
+    }
+</div>
+<style>
+</style>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 espacio text-dark" style="font-weight:bold">
+            <form action="/Tablero/Movimiento" method="post">
+                @ViewBag.Mensaje
+                <h2>Tablero Versus</h2>
+                <label>Fila <input class="fila" type="text" id="fila" name="fila" style="color:black" /></label><label>(solo numeros)</label>
+                <br />
+                <label>Columna <input class="columna" type="text" id="columna" name="columna" style="color:black" /></label><label>(solo letras)</label>
+                <br />
+                <br />
+                <input class="button" type="submit" value="OK" name="button" id="button" />
+                <br />
+                <br />
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 uno text-dark" style="font-weight:bold">
+            <form action="/Tablero/TableroVersus" method="post">
+                <label>Primer Jugador, elige el color de tu ficha (blanco o negro)<input class="f" type="text" id="f" name="f" style="color:black" /></label>
+                <input class="button1" type="submit" value="Iniciar Juego" name="inicio" id="incio" />
+            </form>
+        </div>
+    </div>
+</div>
+<style>
+    .dos {
+        margin-left: 87%;
+        margin-top: -250px;
+        border-radius: 20%;
+    }
+</style>
+
+@*<div class="container">
+        <div class="row">
+            <div class="dos text-dark" style="font-weight:bold">
+                <form action="/Tablero/TableroVersus" method="post">
+                    <input class="button1" type="submit" value="Saltar Turno" name="inicio" id="incio" />
+                </form>
+            </div>
+        </div>
+    </div>*@
+

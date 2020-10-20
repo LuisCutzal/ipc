@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "StartSesion";
+    ViewBag.Title = "ElegirModo_Solitario";
     Layout = "~/Views/Master/Pagina_inicio_master.cshtml";
 }
 <link href="~/Content/Paginas_Varias.css" rel="stylesheet" />
@@ -328,51 +328,32 @@
     </table>
 </div>
 <div class="primero">
-    <h2>Modos de Juego</h2>
+    <h2>Modos de Juego Solitario</h2>
 </div>
 <div class="Botones">
     <div class="Boton1">
         <div class="col-md-3">
             <!--boton para cargar una partida guardada-->
-            <form action="../Tablero/ElegirModo_Solitario" method="post">
-                    <input type="submit" value="Solitario" />
-                
-                </form>
-            
-            @*<input type="submit" value="Solitario" />*@
-
-            @*este solitario es primero para sargar un archivo, si no se quiere cargar el archivo
-            entonces solo darle siguiente o algun otro boton para ir al tablero*@
-
+            <form action="../Tablero/Index" method="post">
+                <input type="submit" value="MODO NORMAL" />
+            </form>
         </div>
     </div>
     <div class="Boton2">
         <div class="col-md-3">
-            <!--boton para cargar una partida guardada-->
-            @*<form action="/Home/Contact" method="post">
-                    <input type="submit" value="Versus" />
-                </form>*@
-            <form action="../Tablero/ElegirModo_Versus" method="post">
-                <input type="submit" value="Versus" />
+            <form action="../Tablero/IndexInversoSolitario" method="post">
+                <input type="submit" value="MODO INVERSO" />
             </form>
-            
+
         </div>
     </div>
 
     <div class="Boton3">
         <div class="col-md-3">
-            <!--boton para cargar una partida guardada-->
-            @*<form action="/Home/Contact" method="post">
-                    <input type="submit" value="Torneo" />
-                </form>*@
-
-            <input type="submit" value="Torneo" />
+            <form action="../Tablero/IndexXtreamSolitario" method="post">
+                <input type="submit" value="MODO XTREAM" />
+            </form>
         </div>
 
     </div>
 </div>
-
-    
-
-
-

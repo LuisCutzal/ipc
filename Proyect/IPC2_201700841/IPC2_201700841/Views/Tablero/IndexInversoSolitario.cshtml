@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "IndexInversoSolitario";
+    Layout = "~/Views/Master/Pagina_inicio_master.cshtml";
+}
+
+@model IPC2_201700841.Models.ViewModels.ArchivoModel
+<h2 style="color:white">Cargar Archivo</h2>
+@using (Html.BeginForm("Index", "Tablero", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        <div>
+            <!--div para el archivo-->
+            @*@Html.LabelFor(d => d.Archivo)*@
+            @Html.TextBoxFor(d => d.Archivo, new { type = "file", accept = ".xml" })
+            @Html.ValidationMessageFor(d => d.Archivo)
+        </div>
+        <div>
+            <input type="submit" value="Aceptar" />
+        </div>
+    </div>
+
+    <p />
+    <p />
+    <p />
+}
+
+
+@* finalizamos *@
+<div class="botonTablero">
+    <div class="col-md-4">
+        <!--boton para cargar una partida guardada-->
+        <form action="/Tablero/TableroSolitarioInverso" method="post">
+            <input type="submit" value="Tablero" />
+        </form>
+    </div>
+</div>

@@ -29,6 +29,33 @@ namespace IPC2_201700841.Controllers
         {
             return View();
         }
+        public ActionResult ElegirModo_Solitario()
+        {
+            return View();
+        }
+        public ActionResult ElegirModo_Versus()
+        {
+            return View();
+        }
+
+
+        public ActionResult IndexInversoSolitario()
+        {
+            return View();
+        }
+        public ActionResult IndexXtreamSolitario()
+        {
+            return View();
+        }
+        public ActionResult IndexXtreamVersus()
+        {
+            return View();
+        }
+        public ActionResult IndexInversoVersus()
+        {
+            return View();
+        }
+
         public ActionResult TableroSolitario(string f)
         {
             if (Session["juego"] == null)
@@ -72,12 +99,219 @@ namespace IPC2_201700841.Controllers
                 return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
             }
         }
+
+        public ActionResult TableroSolitarioInverso(string f)
+        {
+            if (Session["juego"] == null)
+            {
+                ObtenerContenidoA i1 = new ObtenerContenidoA();
+                i1.color = "blanco";
+                i1.fila = 4;
+                i1.columna = "D";
+                ObtenerContenidoA i2 = new ObtenerContenidoA();
+                i2.color = "negro";
+                i2.fila = 4;
+                i2.columna = "E";
+                ObtenerContenidoA i3 = new ObtenerContenidoA();
+                i3.color = "negro";
+                i3.fila = 5;
+                i3.columna = "D";
+                ObtenerContenidoA i4 = new ObtenerContenidoA();
+                i4.color = "blanco";
+                i4.fila = 5;
+                i4.columna = "E";
+                List<ObtenerContenidoA> fichas = new List<ObtenerContenidoA>();
+                fichas.Add(i1);
+                fichas.Add(i2);
+                fichas.Add(i3);
+                fichas.Add(i4);
+                Session["juego"] = fichas;
+                if (f == "blanco") //para cuando cualquier usuario eliga una ficha de color negro le toca segundo
+                {
+                    var cero = 0;
+                    Session["turno"] = cero;
+
+                }
+                else //para cuando el usuario eligio una ficha de color blanco le toca primero
+                {
+                    Session["turno"] = null;
+                }
+                return View("~/Views/Tablero/TableroSolitarioInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+            }
+            else
+            {
+                return View("~/Views/Tablero/TableroSolitarioInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+            }
+        }
+
+        public ActionResult TableroSolitarioXtream(string f)
+        {
+            if (Session["juego"] == null)
+            {
+                ObtenerContenidoA i1 = new ObtenerContenidoA();
+                i1.color = "blanco";
+                i1.fila = 4;
+                i1.columna = "D";
+                ObtenerContenidoA i2 = new ObtenerContenidoA();
+                i2.color = "negro";
+                i2.fila = 4;
+                i2.columna = "E";
+                ObtenerContenidoA i3 = new ObtenerContenidoA();
+                i3.color = "negro";
+                i3.fila = 5;
+                i3.columna = "D";
+                ObtenerContenidoA i4 = new ObtenerContenidoA();
+                i4.color = "blanco";
+                i4.fila = 5;
+                i4.columna = "E";
+                List<ObtenerContenidoA> fichas = new List<ObtenerContenidoA>();
+                fichas.Add(i1);
+                fichas.Add(i2);
+                fichas.Add(i3);
+                fichas.Add(i4);
+                Session["juego"] = fichas;
+                if (f == "blanco") //para cuando cualquier usuario eliga una ficha de color negro le toca segundo
+                {
+                    var cero = 0;
+                    Session["turno"] = cero;
+
+                }
+                else //para cuando el usuario eligio una ficha de color blanco le toca primero
+                {
+                    Session["turno"] = null;
+                }
+                return View("~/Views/Tablero/TableroSolitarioInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+            }
+            else
+            {
+                return View("~/Views/Tablero/TableroSolitarioInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+            }
+        }
+
+        public ActionResult TableroVersusInverso(string f)
+        {
+            if (Session["juego"] == null)
+            {
+                ObtenerContenidoA i1 = new ObtenerContenidoA();
+                i1.color = "blanco";
+                i1.fila = 4;
+                i1.columna = "D";
+                ObtenerContenidoA i2 = new ObtenerContenidoA();
+                i2.color = "negro";
+                i2.fila = 4;
+                i2.columna = "E";
+                ObtenerContenidoA i3 = new ObtenerContenidoA();
+                i3.color = "negro";
+                i3.fila = 5;
+                i3.columna = "D";
+                ObtenerContenidoA i4 = new ObtenerContenidoA();
+                i4.color = "blanco";
+                i4.fila = 5;
+                i4.columna = "E";
+                List<ObtenerContenidoA> fichas = new List<ObtenerContenidoA>();
+                fichas.Add(i1);
+                fichas.Add(i2);
+                fichas.Add(i3);
+                fichas.Add(i4);
+                Session["juego"] = fichas;
+                if (f == "blanco") //para cuando cualquier usuario eliga una ficha de color negro le toca segundo
+                {
+                    var cero = 0;
+                    Session["turno"] = cero;
+
+                }
+                else //para cuando el usuario eligio una ficha de color blanco le toca primero
+                {
+                    Session["turno"] = null;
+                }
+                return View("~/Views/Tablero/TableroVersusInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+            }
+            else
+            {
+                return View("~/Views/Tablero/TableroVersusInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+            }
+        }
+
+        public ActionResult TableroVersusXtream(string f)
+        {
+            if (Session["juego"] == null)
+            {
+                ObtenerContenidoA i1 = new ObtenerContenidoA();
+                i1.color = "blanco";
+                i1.fila = 4;
+                i1.columna = "D";
+                ObtenerContenidoA i2 = new ObtenerContenidoA();
+                i2.color = "negro";
+                i2.fila = 4;
+                i2.columna = "E";
+                ObtenerContenidoA i3 = new ObtenerContenidoA();
+                i3.color = "negro";
+                i3.fila = 5;
+                i3.columna = "D";
+                ObtenerContenidoA i4 = new ObtenerContenidoA();
+                i4.color = "blanco";
+                i4.fila = 5;
+                i4.columna = "E";
+                List<ObtenerContenidoA> fichas = new List<ObtenerContenidoA>();
+                fichas.Add(i1);
+                fichas.Add(i2);
+                fichas.Add(i3);
+                fichas.Add(i4);
+                Session["juego"] = fichas;
+                if (f == "blanco") //para cuando cualquier usuario eliga una ficha de color negro le toca segundo
+                {
+                    var cero = 0;
+                    Session["turno"] = cero;
+
+                }
+                else //para cuando el usuario eligio una ficha de color blanco le toca primero
+                {
+                    Session["turno"] = null;
+                }
+                return View("~/Views/Tablero/TableroVersusXtream.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+            }
+            else
+            {
+                return View("~/Views/Tablero/TableroVersusXtream.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+            }
+        }
+
         [HttpPost]
         public ActionResult InicioSolitario() //esto es para cuando estamos en el modo solitario
         {
             
             return View("~/Views/Tablero/TableroSolitario.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
         }
+
+        [HttpPost]
+        public ActionResult InicioSolitarioInverso() //esto es para cuando estamos en el modo solitario
+        {
+
+            return View("~/Views/Tablero/TableroSolitarioInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+        }
+        [HttpPost]
+        public ActionResult InicioSolitarioXtream() //esto es para cuando estamos en el modo solitario
+        {
+
+            return View("~/Views/Tablero/TableroSolitarioXtream.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+        }
+
+
+        [HttpPost]
+        public ActionResult InicioVersusInverso() //esto es para cuando estamos en el modo solitario
+        {
+
+            return View("~/Views/Tablero/TableroVersusInverso.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+        }
+        [HttpPost]
+        public ActionResult InicioVersusXtream() //esto es para cuando estamos en el modo solitario
+        {
+
+            return View("~/Views/Tablero/TableroVersusXtream.cshtml", (List<ObtenerContenidoA>)Session["juego"]);
+        }
+
+
+
         public ActionResult MovimientoSolitario(int fila, string columna) //tablero modo solitario
         {
             var inicio = (List<ObtenerContenidoA>)Session["juego"]; //lista piesas
@@ -943,5 +1177,7 @@ namespace IPC2_201700841.Controllers
             var ArchivoResultado = File(estar, "application/octet-stream", " ");
             return ArchivoResultado;
         }
+
+        
     }
 }
