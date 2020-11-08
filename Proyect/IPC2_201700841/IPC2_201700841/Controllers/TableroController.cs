@@ -38,6 +38,12 @@ namespace IPC2_201700841.Controllers
             return View();
         }
 
+        public ActionResult AperturaPersonalizadaXColorSolitario()
+        {
+            return View();
+        }
+
+        public ActionResult AperturaSolitario() { return View(); }
 
         public ActionResult IndexInversoSolitario()
         {
@@ -52,6 +58,11 @@ namespace IPC2_201700841.Controllers
             return View();
         }
         public ActionResult IndexInversoVersus()
+        {
+            return View();
+        }
+
+        public ActionResult EegirModoenXtreamSolitario() 
         {
             return View();
         }

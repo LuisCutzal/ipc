@@ -309,6 +309,9 @@
     <Content Include="Views\Tablero\IndexXtreamVersus.cshtml" />
     <Content Include="Views\Tablero\TableroVersusInverso.cshtml" />
     <Content Include="Views\Tablero\TableroVersusXtream.cshtml" />
+    <Content Include="Views\Tablero\EegirModoenXtreamSolitario.cshtml" />
+    <Content Include="Views\Tablero\AperturaPersonalizadaXColorSolitario.cshtml" />
+    <Content Include="Views\Tablero\AperturaSolitario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

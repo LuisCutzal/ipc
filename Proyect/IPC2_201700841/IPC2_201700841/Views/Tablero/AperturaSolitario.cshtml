@@ -1,8 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "ElegirModo_Solitario";
+    ViewBag.Title = "AperturaSolitario";
     Layout = "~/Views/Master/Pagina_inicio_master.cshtml";
 }
+
 <link href="~/Content/Paginas_Varias.css" rel="stylesheet" />
 <div class="primero">
     <h1>BIENVENIDO A OTHELLO</h1>
@@ -331,27 +332,28 @@
     <h2>Modos de Juego Solitario</h2>
 </div>
 <div class="Botones">
-    <div class="Boton1">
-        <div class="col-md-3">
-            <!--boton para cargar una partida guardada-->
-            <form action="../Tablero/Index" method="post">
+    <!--<div class="Boton1">
+        <div class="col-md-3">-->
+    <!--boton para cargar una partida guardada-->
+    <!--<form action="../Tablero/Index" method="post">
                 <input type="submit" value="MODO NORMAL" />
             </form>
         </div>
-    </div>
-    @*<div class="Boton2">
+    </div>-->
+    <div class="Boton2">
         <div class="col-md-3">
             <form action="../Tablero/IndexInversoSolitario" method="post">
-                <input type="submit" value="MODO INVERSO" />
+                <input type="submit" value="APERTURA PERSONALIZADA POR COLORES" />
             </form>
 
         </div>
-    </div>*@
+    </div>
 
     <div class="Boton3">
         <div class="col-md-3">
-            <form action="../Tablero/EegirModoenXtreamSolitario" method="post">
-                <input type="submit" value="MODO XTREAM" />
+            <form action="../Tablero/AperturaSolitario" method="post">
+                <!--esto es para la apertura personalizada-->
+                <input type="submit" value="APERTURA NORMAL POR COLORES" />
             </form>
         </div>
 
