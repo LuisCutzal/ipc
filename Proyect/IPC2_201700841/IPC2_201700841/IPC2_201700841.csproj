@@ -312,6 +312,7 @@
     <Content Include="Views\Tablero\EegirModoenXtreamSolitario.cshtml" />
     <Content Include="Views\Tablero\AperturaPersonalizadaXColorSolitario.cshtml" />
     <Content Include="Views\Tablero\AperturaSolitario.cshtml" />
+    <Content Include="Views\Tablero\AperturaNormalXColorSolitario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
