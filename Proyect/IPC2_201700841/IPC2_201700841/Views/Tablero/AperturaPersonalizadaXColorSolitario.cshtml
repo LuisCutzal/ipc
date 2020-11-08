@@ -6,3 +6,57 @@
 
 <h2>AperturaPersonalizadaXColorSolitario</h2>
 
+
+@model IPC2_201700841.Models.ViewModels.ArchivoModel
+<h2 style="color:black">Cargar Archivo</h2>
+@using (Html.BeginForm("Index", "Tablero", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="Ar">
+        <div>
+            <!--div para el archivo-->
+            @*@Html.LabelFor(d => d.Archivo)*@
+            @Html.TextBoxFor(d => d.Archivo, new { type = "file", accept = ".xml" })
+            @Html.ValidationMessageFor(d => d.Archivo)
+        </div>
+        <div>
+            <input type="submit" value="Aceptar" />
+        </div>
+    </div>
+
+    <p />
+    <p />
+    <p />
+}
+
+
+@* finalizamos *@
+<style>
+    .Ar {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .espacio {
+        margin-left: 40%;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 espacio text-dark" style="font-weight:bold">
+            <form action="/Tablero/TableroSolitarioXtream" method="post">
+                @ViewBag.Mensaje
+                <h2>Ingrese dimenciones del tablero</h2>
+                <label>Filas <input class="fila" type="text" id="fila" name="fila" style="color:black" /></label><label>(números)</label>
+                <br />
+                <label>Columnas <input class="columna" type="text" id="columna" name="columna" style="color:black" /></label><label>(números)</label>
+                <br />
+                <br />
+                <input class="button" type="submit" value="Tablero" name="button" id="button" />
+
+                <br />
+                <br />
+            </form>
+        </div>
+    </div>
+</div>
