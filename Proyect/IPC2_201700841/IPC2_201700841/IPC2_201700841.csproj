@@ -313,6 +313,9 @@
     <Content Include="Views\Tablero\AperturaPersonalizadaXColorSolitario.cshtml" />
     <Content Include="Views\Tablero\AperturaSolitario.cshtml" />
     <Content Include="Views\Tablero\AperturaNormalXColorSolitario.cshtml" />
+    <Content Include="Views\Tablero\AperturaVersus.cshtml" />
+    <Content Include="Views\Tablero\AperturaPersonalizadaXColorVersus.cshtml" />
+    <Content Include="Views\Tablero\AperturaNormalXColorVersus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

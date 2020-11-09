@@ -46,6 +46,11 @@ namespace IPC2_201700841.Controllers
         public ActionResult AperturaSolitario() { return View(); }
         public ActionResult AperturaNormalXColorSolitario() { return View(); }
 
+        public ActionResult AperturaVersus() { return View(); }
+        public ActionResult AperturaPersonalizadaXColorVersus() { return View(); }
+
+        public ActionResult AperturaNormalXColorVersus() { return View(); }
+
         public ActionResult IndexInversoSolitario()
         {
             return View();
