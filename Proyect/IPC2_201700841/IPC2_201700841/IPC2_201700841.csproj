@@ -316,6 +316,8 @@
     <Content Include="Views\Tablero\AperturaVersus.cshtml" />
     <Content Include="Views\Tablero\AperturaPersonalizadaXColorVersus.cshtml" />
     <Content Include="Views\Tablero\AperturaNormalXColorVersus.cshtml" />
+    <Content Include="Views\Tablero\TableroVersusXtreamPersonalizado.cshtml" />
+    <Content Include="Views\Tablero\TableroSolitarioXtreamPersonalizado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

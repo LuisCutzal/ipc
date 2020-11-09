@@ -51,6 +51,9 @@ namespace IPC2_201700841.Controllers
 
         public ActionResult AperturaNormalXColorVersus() { return View(); }
 
+        public ActionResult TableroVersusXtreamPersonalizado() { return View(); }
+
+        public ActionResult TableroSolitarioXtreamPersonalizado() { return View(); }
         public ActionResult IndexInversoSolitario()
         {
             return View();
